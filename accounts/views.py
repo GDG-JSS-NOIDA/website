@@ -1,4 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404,redirect
+from django.contrib.auth import authenticate,login 
+from django.views.generic import View
+from .forms import UserForm
+from django.contrib.auth import logout
+
 
 class UserFormView(View):
 	form_class = UserForm
@@ -31,21 +36,49 @@ class UserFormView(View):
 
 		return render(request, self.template_name, {'form' : form})	
 
-		def register(request):
-		    form = UserForm(request.POST or None)
-		    if form.is_valid():
-		        user = form.save(commit=False)
-		        username = form.cleaned_data['username']
-		        password = form.cleaned_data['password']
-		        user.set_password(password)
-		        user.save()
-		        user = authenticate(username=username, password=password)
-		        if user is not None:
-		            if user.is_active:
-		                login(request, user)
-		                albums = Album.objects.filter(user=request.user)
-		                return render(request, 'music/index.html', {'albums': albums})
-		    context = {
-		        "form": form,
-		    }
-		    return render(request, 'accounts/register.html', context)
+def logout_user(request):
+    logout(request)
+    form = UserForm(request.POST or None)
+    context = {
+        "form": form,
+    }
+    return render(request, 'accounts/login.html', context)
+
+def register(request):
+    form = UserForm(request.POST or None)
+    if form.is_valid():
+        user = form.save(commit=False)
+        username = form.cleaned_data['username']
+        password = form.cleaned_data['password']
+        user.set_password(password)
+        user.save()
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                
+                return render(request, '#')
+    context = {
+        "form": form,
+    }
+    return render(request, 'accounts/register.html', context)
+
+def login_user(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                
+                return render(request, '#', )
+            else:
+                return render(request, '#', {'error_message': 'Your account has been disabled'})
+        else:
+            return render(request, '#', {'error_message': 'Invalid login'})
+    return render(request, 'accounts/login.html')
+
+
+
+		
