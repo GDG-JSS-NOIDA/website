@@ -12,11 +12,19 @@ Follow this guide to setup this project on your local machine.
 
     ```shell
     cd gdgsite
-    virtualenv venv
+    virtualenv -p python3 venv # create virtual env
     source venv/bin/activate  # run this command everytime before starting on the project
-    pip install -e django/ # this will install the required django version
     pip install -r requirements/dev.txt
     ```
+4. For creating database migrations run
+    
+    `python manage.py migrate`
+    `python manage.py makemigrations`
+
+5. For running the server
+   
+    `python manage.py runserver`
+
 
 [virtualenv]: https://virtualenv.pypa.io/
 [python]: https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz
