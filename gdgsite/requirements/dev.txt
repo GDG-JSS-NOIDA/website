@@ -1,0 +1,6 @@
+-r common.txt
+
+autopep8==1.2.4
+django-autofixture==0.12.1
+django-extensions==1.7.8
+
