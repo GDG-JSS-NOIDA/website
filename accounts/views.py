@@ -1,3 +1,4 @@
+
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import authenticate, login 
 from django.views.generic import View
@@ -5,6 +6,7 @@ from .forms import UserForm
 from django.contrib.auth import logout
 #from django.contrib.auth.mixins import (LoginRequiredMixin)
 from django.http import HttpResponseRedirect, HttpResponse
+
 
 
 class UserFormView(View):
