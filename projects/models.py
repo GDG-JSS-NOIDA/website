@@ -5,9 +5,9 @@ from django.db import models
 
 class Project(models.Model):
 	name = models.CharField(max_length=100)
-	description = models.TextField(max_length=300)
-	github_repo = models.CharField(max_length=100)
-	live_link = models.CharField(max_length=200)
+	description = models.TextField(max_length=300, blank = True, null = True)
+	github_repo = models.CharField(max_length=100, blank = True, null = True)
+	live_link = models.CharField(max_length=200, blank = True, null = True)
 	#contributors, image are fetched from new tables
 
 	def __str__(self):
@@ -23,6 +23,7 @@ class Image(models.Model):
 		return self.name
 
 
+# to be linked from user table, all the members
 class Contributors(models.Model):
 	name = models.CharField(max_length=100)
 	project = models.ForeignKey(Project)
