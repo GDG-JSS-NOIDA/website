@@ -7,7 +7,7 @@ class UserForm(forms.ModelForm):  # blueprint of user form
     # it..widget=forms.PasswordInput = this to to make *** when inputting
     # password
     password = forms.CharField(widget=forms.PasswordInput)
-
+    
     class Meta:  # information about class
         model = User  # user model from admin
         fields = ['username', 'email', 'password']
