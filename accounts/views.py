@@ -72,11 +72,11 @@ def login_user(request):
             if user.is_active:
                 login(request, user)
                 
-                return render(request, '#', )
+                return render(request, 'accounts/index.html')
             else:
-                return render(request, '#', {'error_message': 'Your account has been disabled'})
+                return render(request, 'accounts/index.html', {'error_message': 'Your account has been disabled'})
         else:
-            return render(request, '#', {'error_message': 'Invalid login'})
+            return render(request, 'accounts/login.html', {'error_message': 'Invalid login'})
     return render(request, 'accounts/login.html')
 
 

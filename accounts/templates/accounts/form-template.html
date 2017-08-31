@@ -1,4 +1,5 @@
 {% for field in form %}
+	{% csrf_token %}
 	<div class="form-group">
 		<div class="col-sm-offset-2 col-sm-10"> 
 			<span class="text-danger small">{{ field.errors }}</span> <!--to give error if nothing is entered-->
