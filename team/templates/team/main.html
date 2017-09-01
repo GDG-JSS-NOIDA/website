@@ -12,8 +12,8 @@
 
       {% for member in member_details %}
         <p>{{member.name}} and is {{member.status}} of GDG</p>
-        <p><button type="button" name="button"><a href="{% url 'team:edit' pk=user_id.pk %}">Edit</a></button></p>
-        <p><button type="button" name="button"><a href="{% url 'team:delete' pk=user_id.pk %}">Delete</a></button></p>
+        <p><button type="button" name="button"><a href="/team/edit/{{member.user_id.pk}}">Edit</a></button></p>
+        <p><button type="button" name="button"><a href="">Delete</a></button></p>
 
 
       {% endfor %}
