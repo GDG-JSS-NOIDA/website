@@ -54,7 +54,7 @@ def RemoveProject(request, id):
 
 def AddImage(request, id):
 	if request.method=="POST":
-		form = ImageForm(request.POST)
+		form = ImageForm(request.POST, request.FILES)
 		if form.is_valid():
 			f = form.save(commit = False)
 			f.project = Project.objects.get(id=id)
