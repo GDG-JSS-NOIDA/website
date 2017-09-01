@@ -1,12 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth import authenticate, login
-
+from django.contrib.auth import authenticate, login 
 from django.views.generic import View
 from .forms import UserForm
 from django.contrib.auth import logout
 #from django.contrib.auth.mixins import (LoginRequiredMixin)
 from django.http import HttpResponseRedirect, HttpResponse
-
 
 
 class UserFormView(View):
@@ -54,23 +52,27 @@ def logout_user(request):
 
 
 def register(request):
-    form = UserForm(request.POST or None)
-    if form.is_valid():
-        user = form.save(commit=False)
-        username = form.cleaned_data['username']
-        password = form.cleaned_data['password']
-        user.set_password(password)
-        user.save()
-        user = authenticate(username=username, password=password)
-        if user is not None:
-            if user.is_active:
-                login(request, user)
 
-                return render(request, '#')
-    context = {
-        "form": form,
-    }
-    return render(request, 'accounts/register.html', context)
+    if request.user.is_authenticated():
+        form = UserForm(request.POST or None)
+        if form.is_valid():
+            user = form.save(commit=False)
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user.set_password(password)
+            user.save()
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    
+                    return render(request, 'index.html')
+        context = {
+            "form": form,
+        }
+        return render(request, 'accounts/registration_form.html', context)
+    else:
+        return HttpResponseRedirect('/')
 
 
 def login_user(request):
