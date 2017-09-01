@@ -8,8 +8,13 @@
     <h1>This is the list of our team members!</h1>
     {% block content %}
 
+       <h3>To create member click <a href="{% url 'team:create' %}">here</a></h3>
+
       {% for member in member_details %}
         <p>{{member.name}} and is {{member.status}} of GDG</p>
+        <p><button type="button" name="button"><a href="{% url 'team:edit' pk=user_id.pk %}">Edit</a></button></p>
+        <p><button type="button" name="button"><a href="{% url 'team:delete' pk=user_id.pk %}">Delete</a></button></p>
+
 
       {% endfor %}
 
