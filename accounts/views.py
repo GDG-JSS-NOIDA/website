@@ -7,7 +7,6 @@ from django.contrib.auth import logout
 from django.http import HttpResponseRedirect, HttpResponse
 
 
-
 class UserFormView(View):
     form_class = UserForm
     template_name = 'accounts/registration_form.html'
@@ -53,23 +52,27 @@ def logout_user(request):
 
 
 def register(request):
-    form = UserForm(request.POST or None)
-    if form.is_valid():
-        user = form.save(commit=False)
-        username = form.cleaned_data['username']
-        password = form.cleaned_data['password']
-        user.set_password(password)
-        user.save()
-        user = authenticate(username=username, password=password)
-        if user is not None:
-            if user.is_active:
-                login(request, user)
 
-                return render(request, '#')
-    context = {
-        "form": form,
-    }
-    return render(request, 'accounts/register.html', context)
+    if request.user.is_authenticated():
+        form = UserForm(request.POST or None)
+        if form.is_valid():
+            user = form.save(commit=False)
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user.set_password(password)
+            user.save()
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    
+                    return render(request, 'index.html')
+        context = {
+            "form": form,
+        }
+        return render(request, 'accounts/registration_form.html', context)
+    else:
+        return HttpResponseRedirect('/')
 
 
 def login_user(request):
