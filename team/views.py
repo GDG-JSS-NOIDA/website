@@ -4,24 +4,23 @@ from . import models
 from . import forms
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.urlresolvers import reverse_lazy
-from braces.views import SelectRelatedMixin
 
 # Create your views here.
-class MainPage(generic.ListView,LoginRequiredMixin,SelectRelatedMixin):
+class MainPage(generic.ListView,LoginRequiredMixin):
     template_name = 'team/main.html'
     fields = ('name', 'github_link', 'email',
               'pic', 'description', 'linkedin', 'status')
     model = models.Team
     context_object_name = 'member_details'
 
-class ListTeam(generic.ListView,SelectRelatedMixin):
+class ListTeam(generic.ListView):
     fields = ('name', 'github_link', 'email',
               'pic', 'description', 'linkedin', 'status')
     model = models.Team
     context_object_name = 'member_details'
     template_name = 'team/members.html'  # template name should be members.html
 
-class CreateMember(generic.CreateView,LoginRequiredMixin,SelectRelatedMixin):
+class CreateMember(generic.CreateView,LoginRequiredMixin):
 
     model = models.Team
     template_name = 'team/create_member.html'
@@ -34,7 +33,7 @@ class CreateMember(generic.CreateView,LoginRequiredMixin,SelectRelatedMixin):
         self.object.save()
         return super().form_valid(form)
 
-class EditMember(LoginRequiredMixin,generic.UpdateView,SelectRelatedMixin):
+class EditMember(LoginRequiredMixin,generic.UpdateView):
 
     model = models.Team
     template_name = 'team/edit_member.html'
@@ -47,7 +46,7 @@ class EditMember(LoginRequiredMixin,generic.UpdateView,SelectRelatedMixin):
         self.object.save()
         return super().form_valid(form)
 
-class DeleteMember(generic.DeleteView,LoginRequiredMixin,SelectRelatedMixin):
+class DeleteMember(generic.DeleteView,LoginRequiredMixin):
     model = models.Team
     success_url = reverse_lazy("team:main")
 
