@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import authenticate, login 
 from django.views.generic import View
@@ -8,37 +7,40 @@ from django.contrib.auth import logout
 from django.http import HttpResponseRedirect, HttpResponse
 
 
-
 class UserFormView(View):
-	form_class = UserForm
-	template_name = 'accounts/registration_form.html'
+    form_class = UserForm
+    template_name = 'accounts/registration_form.html'
 
-	def get(self, request): # get request method #display blank form
-		form = self.form_class(None) #its none because user gets empty form
-		return render(request, self.template_name, {'form' : form})
-	def post(self, request): # post request method #procee form data into database
-		form = self.form_class(request.POST)
+    def get(self, request):  # get request method #display blank form
+        form = self.form_class(None)  # its none because user gets empty form
+        return render(request, self.template_name, {'form': form})
 
-		if form.is_valid():
+    def post(self, request):  # post request method #procee form data into database
+        form = self.form_class(request.POST)
 
-			user = form.save(commit=False)
+        if form.is_valid():
 
-			#cleaned (normalized) data
-			username = form.cleaned_data['username']
-			password = form.cleaned_data['password']
-			user.set_password(password)
-			user.save()
+            user = form.save(commit=False)
 
-			# returns user objects if credentials are correct
-			user = authenticate(username=username, password=password) #verifies the entered credentials with that saved in database
+            # cleaned (normalized) data
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user.set_password(password)
+            user.save()
 
-			if user is not None:
+            # returns user objects if credentials are correct
+            user = authenticate(username=username, password=password)
+                                # verifies the entered credentials with that
+                                # saved in database
 
-				if user.is_active:
-					login(request, user)
-					return redirect('#') # after log in get them redirected to home page
+            if user is not None:
 
-		return render(request, self.template_name, {'form' : form})	
+                if user.is_active:
+                    login(request, user)
+                    return redirect('#')  # after log in get them redirected to home page
+
+        return render(request, self.template_name, {'form': form})
+
 
 def logout_user(request):
     logout(request)
@@ -48,7 +50,9 @@ def logout_user(request):
     }
     return render(request, 'accounts/login.html', context)
 
+
 def register(request):
+
     if request.user.is_authenticated():
         form = UserForm(request.POST or None)
         if form.is_valid():
@@ -70,6 +74,7 @@ def register(request):
     else:
         return HttpResponseRedirect('/')
 
+
 def login_user(request):
     if request.method == "POST":
         username = request.POST['username']
@@ -78,14 +83,10 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                
+
                 return render(request, 'accounts/index.html')
             else:
                 return render(request, 'accounts/index.html', {'error_message': 'Your account has been disabled'})
         else:
             return render(request, 'accounts/login.html', {'error_message': 'Invalid login'})
     return render(request, 'accounts/login.html')
-
-
-
-		
