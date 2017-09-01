@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth import authenticate, login 
+from django.contrib.auth import authenticate, login
 from django.views.generic import View
 from .forms import UserForm
 from django.contrib.auth import logout
@@ -29,15 +29,15 @@ class UserFormView(View):
             user.save()
 
             # returns user objects if credentials are correct
+            # verifies the entered credentials with that saved in database
             user = authenticate(username=username, password=password)
-                                # verifies the entered credentials with that
-                                # saved in database
 
             if user is not None:
 
                 if user.is_active:
                     login(request, user)
-                    return redirect('#')  # after log in get them redirected to home page
+                    # after log in get them redirected to home page
+                    return redirect('#')
 
         return render(request, self.template_name, {'form': form})
 
