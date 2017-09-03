@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth import authenticate, login 
+from django.contrib.auth import authenticate, login
 from django.views.generic import View
 from .forms import UserForm
 from django.contrib.auth import logout
@@ -8,6 +8,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 
 
 class UserFormView(View):
+
 	form_class = UserForm
 	template_name = 'accounts/registration_form.html'
 
@@ -38,6 +39,7 @@ class UserFormView(View):
 
 		return render(request, self.template_name, {'form' : form})	
 
+
 def logout_user(request):
     logout(request)
     form = UserForm(request.POST or None)
@@ -46,7 +48,9 @@ def logout_user(request):
     }
     return render(request, 'accounts/login.html', context)
 
+
 def register(request):
+
     if request.user.is_authenticated():
         form = UserForm(request.POST or None)
         if form.is_valid():
@@ -76,7 +80,7 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                
+
                 return render(request, 'accounts/index.html')
             else:
                 return render(request, 'accounts/index.html', {'error_message': 'Your account has been disabled'})
@@ -84,6 +88,3 @@ def login_user(request):
             return render(request, 'accounts/login.html', {'error_message': 'Invalid login'})
     return render(request, 'accounts/login.html')
 
-
-
-		

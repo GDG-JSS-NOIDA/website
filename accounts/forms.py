@@ -7,3 +7,4 @@ class UserForm(forms.ModelForm): #blueprint of user form
 		model = User # user model from admin
 		fields = ['username','email','password']
 
+

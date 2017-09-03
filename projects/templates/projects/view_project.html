@@ -1,0 +1,21 @@
+{% extends 'header.html' %}
+{% block title %}
+{{project.name}}
+{% endblock %}
+
+{% block content %}
+		<h1><a href="{% url 'projects:edit_project' project.id %}">{{project.name}}</a></h1>
+		<p><a href="{% url 'projects:remove_project' project.id %}">Remove Project</a></p>
+		<p>{{project.description}}</p>
+		<h3>{{project.github_repo}}</h3>
+		<h3>{{project.live_link}}</h3>
+		{% for contributor in project.contributors_set.all %}
+			<h3>{{contributor.name}}</h3>
+		{% endfor %}
+		{% for image in project.image_set.all %}
+			{% if image.picture %}
+				<img src="{{image.picture.url}}" width="200px" height="200px"><br>
+			{% endif %}
+		{% endfor %}
+		<p><a href="{% url 'projects:add_image' project.id %}">Add Image</a></p>
+{% endblock %}
