@@ -1,4 +1,5 @@
 from django.db import models
+from team.models import Team
 
 # Create your models here.
 
@@ -26,8 +27,8 @@ class Image(models.Model):
 
 # to be linked from user table, all the members
 class Contributors(models.Model):
-    name = models.CharField(max_length=100)
-    project = models.ForeignKey(Project)
+    name = models.OneToOneField(Team)
+    project = models.ManyToManyField(Project)
 
     def __str__(self):
-        return self.name
+        return self.name.name
