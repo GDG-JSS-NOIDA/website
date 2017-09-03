@@ -27,4 +27,4 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="index.html")),
     url(r'^team/',include('team.urls',namespace='team')),
     url(r'^projects/', include('projects.urls')),
-]
+]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
