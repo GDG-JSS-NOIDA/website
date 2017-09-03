@@ -20,8 +20,6 @@ def ProjectDashboard(request):
         form = ProjectForm(request.POST)
         if form.is_valid():
             c_proj = form.save()
-            # return HttpResponseRedirect('/projects/dashboard/')
-            # id = Project.objects.get
             return HttpResponseRedirect(
                 '/projects/dashboard/view/' + str(c_proj.id))
     else:
@@ -37,7 +35,7 @@ def EditProject(request, id):
         form = ProjectForm(request.POST, instance=project)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/projects/dashboard/')
+            return HttpResponseRedirect('/accounts/projects/list/')
     else:
         form = ProjectForm(instance=project)
         return render(request, 'projects/edit_project.html',
@@ -54,18 +52,34 @@ def ViewProject(request, id):
 def RemoveProject(request, id):
     project = Project.objects.get(id=id)
     project.delete()
-    return HttpResponseRedirect('/projects/dashboard/')
+    return HttpResponseRedirect('/accounts/projects/list/')
 
 
 @login_required
 def AddImage(request, id):
-	if request.method=="POST":
-		form = ImageForm(request.POST, request.FILES)
-		if form.is_valid():
-			f = form.save(commit = False)
-			f.project = Project.objects.get(id=id)
-			f.save()
-			return HttpResponseRedirect('/accounts/projects/view/' + str(id))
-	else:
-		form = ImageForm()
-		return render(request, 'projects/add_image.html', {'form': form})
+    if request.method == "POST":
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            f = form.save(commit=False)
+            f.project = Project.objects.get(id=id)
+            f.save()
+            return HttpResponseRedirect('/accounts/projects/view/' + str(id))
+        else:
+            return HttpResponse('form not valid')
+    else:
+        form = ImageForm()
+        return render(request, 'projects/add_image.html', {'form': form})
+
+
+@login_required
+def AddContributor(request, id):
+    if request.method == "POST":
+        form = ContributorForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/accounts/projects/view/' + str(id))
+        else:
+            return HttpResponse('form not valid')
+    else:
+        form = ContributorForm()
+        return render(request, 'projects/add_contributor.html', {'form': form})

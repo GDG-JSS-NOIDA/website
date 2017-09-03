@@ -18,4 +18,5 @@
 			{% endif %}
 		{% endfor %}
 		<p><a href="{% url 'projects:add_image' project.id %}">Add Image</a></p>
+		<p><a href="{% url 'projects:add_contributor' project.id %}">Add Contributor</a></p>
 {% endblock %}
