@@ -8,38 +8,36 @@ from django.http import HttpResponseRedirect, HttpResponse
 
 
 class UserFormView(View):
-    form_class = UserForm
-    template_name = 'accounts/registration_form.html'
 
-    def get(self, request):  # get request method #display blank form
-        form = self.form_class(None)  # its none because user gets empty form
-        return render(request, self.template_name, {'form': form})
+	form_class = UserForm
+	template_name = 'accounts/registration_form.html'
 
-    def post(self, request):  # post request method #procee form data into database
-        form = self.form_class(request.POST)
+	def get(self, request): # get request method #display blank form
+		form = self.form_class(None) #its none because user gets empty form
+		return render(request, self.template_name, {'form' : form})
+	def post(self, request): # post request method #procee form data into database
+		form = self.form_class(request.POST)
 
-        if form.is_valid():
+		if form.is_valid():
 
-            user = form.save(commit=False)
+			user = form.save(commit=False)
 
-            # cleaned (normalized) data
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
-            user.set_password(password)
-            user.save()
+			#cleaned (normalized) data
+			username = form.cleaned_data['username']
+			password = form.cleaned_data['password']
+			user.set_password(password)
+			user.save()
 
-            # returns user objects if credentials are correct
-            # verifies the entered credentials with that saved in database
-            user = authenticate(username=username, password=password)
+			# returns user objects if credentials are correct
+			user = authenticate(username=username, password=password) #verifies the entered credentials with that saved in database
 
-            if user is not None:
+			if user is not None:
 
-                if user.is_active:
-                    login(request, user)
-                    # after log in get them redirected to home page
-                    return redirect('#')
+				if user.is_active:
+					login(request, user)
+					return redirect('#') # after log in get them redirected to home page
 
-        return render(request, self.template_name, {'form': form})
+		return render(request, self.template_name, {'form' : form})	
 
 
 def logout_user(request):
@@ -74,7 +72,6 @@ def register(request):
     else:
         return HttpResponseRedirect('/')
 
-
 def login_user(request):
     if request.method == "POST":
         username = request.POST['username']
@@ -90,3 +87,4 @@ def login_user(request):
         else:
             return render(request, 'accounts/login.html', {'error_message': 'Invalid login'})
     return render(request, 'accounts/login.html')
+

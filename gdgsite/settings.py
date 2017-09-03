@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'team'
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'gdgsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,3 +129,4 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media_cdn')
+

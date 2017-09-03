@@ -1,0 +1,14 @@
+
+{% block content %} <!-- to include base.html we have to wrap this in those blocks also -->
+<div class='col-sm-8 col-sm-offset-3'>
+<h1> Event Form</h1> 
+
+<form method='POST' action='' enctype='multipart/form-data'>{% csrf_token %}<!--action means to what url u want to send it to -->
+{{ form.as_p}} <!--{{ form.as_p}} means form as paragraph -->
+<input type='submit' class='btn btn-default' value='Create Event'>
+
+</form>
+</div>
+{% endblock content %}
+
+ 
