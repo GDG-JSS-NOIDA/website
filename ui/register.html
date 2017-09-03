@@ -22,7 +22,7 @@
 	<meta content="/img/seo/sharing-facebook.png" property="og:image">
 	<meta content="Google Developer Groups are for developers who are interested in Google's developer technology." property="og:description">
 
-	<title>Events • GDG JSS NOIDA</title>
+	<title>Register • GDG JSS NOIDA</title>
 	<link href="/img/favicons/favicon.ico" rel="shortcut icon">
 	<link href="/img/favicons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
 	<link href="/img/favicons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
@@ -42,15 +42,14 @@
 	<meta content="/img/favicons/browserconfig.xml" name="msapplication-config">
 	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 	<link href="./css/main.css" rel="stylesheet">
-	<!--
-	<link href="./css/events.css" rel="stylesheet">
-	<link href="./css/responsive.css" rel="stylesheet">
-	<link href="./css/animate.min.css" rel="stylesheet"><!- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+	<link rel="stylesheet" href="css/reset.min.css">  
+    <link rel="stylesheet" href="css/style.css">	
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
 
     <!-- Loader -->
     <style>
-     .no-js #loader { display: none; }
+     .no-js #loader { display: none;  }
      .js #loader { display: block; position: absolute; left: 100px; top: 0; }
      .loader {
         position: fixed;
@@ -69,7 +68,7 @@
         $(".loader").fadeOut("slow");;
       });
     </script>	
-
+	
 </head>
 
 <body>
@@ -83,7 +82,7 @@
 			<div class="st-content">
 				<!-- Begin Top Section -->
 
-				<section class="top-section image-section" id="top-section" style="background: #673ab7">
+				<section class="top-section image-section" id="top-section" style="background: #00bcd4">
 					<div class="overlay gradient-overlay">
 					</div>
 
@@ -127,18 +126,8 @@
 									<a class="" href="/index.html/#location-map">Contact</a>
 								</li>
 
-
-
 							</ul>
-
-
-
-							<ul class="bottom-navlinks visible-xs" id="bottom-navlinks">
-								<li>
-									<a href="/register.html">Register</a>
-								</li>
-							</ul>
-							<a class="right-nav-button right-nav-button-hidden btn btn-primary waves-effect waves-button waves-light waves-float pull-right hidden-xs hidden-sm" href="/register.html">Register</a>
+							
 						</nav>
 					</header>
 
@@ -146,42 +135,33 @@
 					<div class="content-wrapper">
 						<div class="jumbotron text-left">
 							<div class="animated fadeInLeft visible" data-animation="fadeInLeft" data-delay="500">
-								<h1>Events</h1>
+								<h1>Register</h1>
 							</div>
 						</div>
 					</div>
 				</section>
-				<!-- End Top Section --><!-- Begin -->
+				<!-- End Top Section --><!-- Begin Form Section-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 				<section class="team" id="team">
-					<div class="content-wrapper">
-						<div class="col-lg-10 col-lg-offset-1">
-
+				<section id="form" style="margin: 0 auto;">
+					<div>
+						  <form>
+						  <h1>Event Name</h1>
+						  <input placeholder="Name" type="text"  value="" required>
+						  <input placeholder="Admission Number" type="text"  value="" required>  
+						  <input placeholder="Branch" type="text"  value="" required>   
+						  <input placeholder="Year" type="text"  value="" required>      
+						  <input placeholder="Email address" type="email" value="" required>
+						  <input placeholder="Phone Number" type="text" value="" required>
+						  <button>Send</button>
+						</form>
 					</div>
-				</section> -->
-				<!-- End Team List --><!-- Begin Footer -->
+
+				</section>
+
+
+
+
+				<!-- End Form Section --><!-- Begin Footer -->
 
 		
 				<footer class="footer" id="footer">
@@ -280,12 +260,11 @@
 	</script> 
 	<script>
 	Waves.displayEffect(); 
-	</script> <!--
+	</script> 
 	<script src="./js/scripts.min.js">
 	</script> 
-	<script src="./js/main.js">
-	</script> 
-	<script src=../js/wow.min.js">
-	</script> -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+  
+    <script src="js/index.js"></script>	
 </body>
 </html>

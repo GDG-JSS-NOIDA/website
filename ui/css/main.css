@@ -2648,6 +2648,8 @@ nav li a.current, nav li a:hover {
 		transform: translateY(-16px)
 	}
 }
+
+
 .top-section {
 	position: relative;
 	min-height: 400px;
