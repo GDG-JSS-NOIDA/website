@@ -11,3 +11,9 @@ class ImageForm(forms.ModelForm):
 		model = Image
 		exclude = ['project']
 
+
+class ContributorForm(forms.ModelForm):
+	class Meta:
+		model = Contributors
+		fields = '__all__'
+

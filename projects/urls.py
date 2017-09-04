@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from . import views
 
+app_name = "projects"
 
 urlpatterns = [
     url(r'^$', views.DisplayProjects, name='display_projects'),
@@ -9,5 +10,6 @@ urlpatterns = [
     url(r'^view/(\d+)/$', views.ViewProject, name='view_project'),
     url(r'^remove/(\d+)/$', views.RemoveProject, name='remove_project'),
     url(r'^view/(\d+)/addImage$', views.AddImage, name='add_image'),
+    url(r'^view/(\d+)/addContributor$', views.AddContributor, name='add_contributor'),
 ]
 
