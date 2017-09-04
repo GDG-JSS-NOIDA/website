@@ -8,7 +8,24 @@
   <div class="col-sm-12 ">
     <div class="thumbnail">
         <center><h1>Events</h1></center>
-        <h3>Ongoing Events:</h3><br />
+        {% for obj in queryset1 %}
+        {% if obj.image %}
+        <img src ='{{ obj.image.url }}' class='img-responsive' />
+        {% endif %}
+        <div class="caption">
+            <h3><p>{{ obj.event_name }}</a><small> &nbsp; {{ obj.timestamp | timesince  }} ago</p></small></h3>
+            <p><b>Created By</b> : {{ obj.created_by}} </p>
+        <p>Desc:{{ obj.content}}</p>
+        <p>Start Date:{{obj.start_date}}</p>
+        <p>End Date:{{obj.end_date}}</p>
+        <p>Speaker:{{obj.speaker}}</p>
+        <p>Registration link:{{obj.reg_link}}</p>
+        <p>Category: {{ obj.category }}</p>
+        {% endfor %}
+        </div>
+        </div>
+
+       <!-- <h3>Ongoing Events:</h3><br />
         {% for obj in queryset1 %}
         {% if obj.image %}
         <img src ='{{ obj.image.url }}' class='img-responsive' />
@@ -16,11 +33,11 @@
         <div class="caption">
         	<p><h3>{{ obj.event_name }}</h3><small> &nbsp; {{ obj.timestamp | timesince  }} ago</small></p>
             <p><b>Created By</b> : {{ obj.created_by}} </p>
-        <p>{{ obj.content|linebreaks|truncatechars:120 }}</p><br>
-        <p>{{obj.start_date}}</p>
-        <p>{{obj.end_date}}</p>
-        <p>{{obj.speaker}}</p>
-        <p>{{obj.reg_link}}</p>
+        <p>Desc:{{ obj.content }}</p>
+        <p>Start date:{{obj.start_date}}</p>
+        <p>End date:{{obj.end_date}}</p>
+        <p>Speaker{{obj.speaker}}</p>
+        <p>Registration Link:{{obj.reg_link}}</p>
         {% endfor %}
 
         <h3>Future Events:</h3><br />
@@ -31,11 +48,11 @@
         <div class="caption">
             <h3><p>{{ obj.event_name }}</a><small> &nbsp; {{ obj.timestamp | timesince  }} ago</p></small></h3>
             <p><b>Created By</b> : {{ obj.created_by}} </p>
-        <p>{{ obj.content|linebreaks|truncatechars:120 }}</p><br>
-        <p>{{obj.start_date}}</p>
-        <p>{{obj.end_date}}</p>
-        <p>{{obj.speaker}}</p>
-        <p>{{obj.reg_link}}</p>
+        <p>Desc:{{ obj.content}}</p>
+        <p>Start Date:{{obj.start_date}}</p>
+        <p>End Date:{{obj.end_date}}</p>
+        <p>Speaker:{{obj.speaker}}</p>
+        <p>Registration link:{{obj.reg_link}}</p>
         {% endfor %}
 
         <h3>Past Events:</h3><br />
@@ -46,11 +63,11 @@
         <div class="caption">
             <h3><p>{{ obj.event_name }}</a><small> &nbsp; {{ obj.timestamp | timesince  }} ago</p></small></h3>
             <p><b>Created By</b> : {{ obj.created_by}} </p>
-        <p>{{ obj.content|linebreaks|truncatechars:120 }}</p><br>
-        <p>{{obj.start_date}}</p>
-        <p>{{obj.end_date}}</p>
-        <p>{{obj.speaker}}</p>
-        <p>{{obj.reg_link}}</p>
+        <p>Desc:{{ obj.content}}</p><br>
+        <p>Start Date:{{obj.start_date}}</p>
+        <p>End Date:{{obj.end_date}}</p>
+        <p>Speaker:{{obj.speaker}}</p>
+        <p>Registration Link:{{obj.reg_link}}</p>
         {% endfor %}
 
 

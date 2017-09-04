@@ -1,5 +1,5 @@
 from django import forms
-from .models import Event
+from .models import Event,Image
 
 class EventForm(forms.ModelForm):
 	class Meta:
@@ -12,7 +12,7 @@ class EventForm(forms.ModelForm):
 		"speaker",
 		"status",
 		"reg_link",
-		"image",
-
-
 		]
+	class Meta:
+		model  = Image
+		fields  = "__all__"

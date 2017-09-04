@@ -24,14 +24,8 @@ class Event(models.Model):
 	content = models.TextField()
 	speaker = models.CharField(max_length = 255)
 	status =  models.CharField(max_length = 255)
-	reg_link = models.CharField(max_length = 255)
+	reg_link = models.URLField(max_length = 120)
 	created_by = models.CharField(max_length= 255)
-	image = models.ImageField(upload_to=upload_location,
-		null = True,blank = True,
-		height_field="height_field",
-		width_field="width_field")
-	height_field = models.IntegerField(default=0)
-	width_field = models.IntegerField(default=0)
 	slug = models.SlugField(unique=True)
 
 	def __str__(self):
@@ -64,6 +58,19 @@ def pre_save_event_receiver(sender, instance, *args, **kwargs):
  
 
 pre_save.connect(pre_save_event_receiver, sender=Event)
+
+class Image(models.Model):
+	name = models.CharField(max_length= 100)
+	event = models.ForeignKey(Event)
+	picture = models.ImageField(upload_to='media/events/',
+		null = True,blank = True,
+		height_field="height_field",
+		width_field="width_field")
+	height_field = models.IntegerField(default=0)
+	width_field = models.IntegerField(default=0)
+
+	def __str__(self):
+		return self.name
 		
 
 
