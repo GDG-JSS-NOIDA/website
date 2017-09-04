@@ -8,6 +8,10 @@ env:
 
 install: 
   - pip install -r requirements/dev.txt
+  - pip install coverage
 
 script: 
-  - python manage.py test
+  - coverage run manage.py test
+
+after-success:
+  - coverage report
