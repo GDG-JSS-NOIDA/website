@@ -4,14 +4,14 @@
 <html lang="en">
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-	<link href="./css/css" rel="stylesheet" type="text/css">
+	<link href="./css/fonts.css" rel="stylesheet" type="text/css">
 	<style type="text/css">
 	.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}
 	</style>
 	<style type="text/css">
 	@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}
 	</style>
-	<style type="text/fonts.css">
+	<style type="text/css">
 	.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
 	</style>
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -121,7 +121,7 @@
 
 							<ul>
 								<li>
-									<a class="current" href="#">Home</a>
+									<a class="current" href="/">Home</a>
 								</li>
 
 
@@ -158,7 +158,7 @@
 								<a class="btn btn-primary waves-effect waves-button waves-light waves-float" href="/register.html">Register</a>
 							</div>
 						</div>
-						<a class="explore" href="/#about"><svg class="icon icon-arrow-down" viewbox="0 0 32 32">
+						<a class="explore" href="#about"><svg class="icon icon-arrow-down" viewbox="0 0 32 32">
 						<use xlink:href="/img/sprites/sprites.svg#icon-arrow-down">
 						</use></svg></a>
 					</div>
@@ -220,7 +220,7 @@
 				</section>
 				<!-- End About Section --><!-- Begin Statistic Section -->
 
-				<section class="statistic image-section parallax" id="statistic" style="background-image: url(/img/sections-background/statistic.jpg);">
+				<section class="statistic image-section parallax" id="statistic">
 					<div class="overlay solid-overlay">
 					</div>
 
@@ -320,8 +320,6 @@
 							<h3>Some moments</h3>
 
 
-
-
 							<article class="row">
 								<div class="post col-md-4 col-sm-4 text-left animated hiding imgWrap" data-animation="fadeInDown" data-delay="500">
 								          <img class="img-responsive imgImg" src="/img/hackathon/hackathon-0.png">
@@ -352,36 +350,20 @@
 							      	
 								</div>
 							</article>
+
 						</div>
 					</div>
 				</section>
-				<!-- End Latest News Section -->
-
-				<!-- Begin Location Section -->
+				<!-- End Latest News Section --><!-- Begin Location Section -->
 
 				<section class="location-map" id="location-map">
 
 
-			
-
 						<iframe frameborder="0" style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223) border:0"
 								  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBDH5mPzRXT8JI9m01mXhsesDQEX4Tl8oY
 								    &q=place_id:ChIJf1Y03EHlDDkRGWvWI8sn0E8" allowfullscreen>
-								</iframe>
-							
-
-
-
-
-
-
-
-
-
-
-
-
-
+						</iframe>
+	
 
 				</section>
 				<!-- End Location Section --><!-- Begin Footer -->
@@ -446,6 +428,9 @@
 									<use xlink:href="/img/sprites/sprites.svg#icon-github">
 									</use></svg></a>
 								</li>
+
+
+
 							</ul>
 						</div>
 					</div>
@@ -453,31 +438,30 @@
 
 					<div class="row">
 
-						<div class="col-md-6">
+						<div class="col-md-4>
 							<p class="copyright">Based on <a href="https://github.com/gdg-x/zeppelin" target="_blank">Project Zeppelin</a>. Built with <i class="fa fa-fw fa-coffee"></i> and <i class="fa fa-fw fa-heart"></i> by <a href="#">GDG JSS Noida.</a></p>
 						</div>
+			        
+					
 					</div>
+
+
 				</footer>
 				<!-- End Footer -->
 			</div>
 		</div>
 	</div>
-	<script async src="http://www.google-analytics.com/analytics.js">
-	</script>
+	<script async src="http://www.google-analytics.com/analytics.js"></script>
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-43643469-5', 'gdg-x.github.io'); ga('send', 'pageview'); 
 	</script> 
  
-	<script src="./js/bootstrap.min.js">
-	</script> 
+	<script src="./js/bootstrap.min.js">	</script> 
 	<script>
 	if (typeof($.fn.modal) === 'undefined') { document.write('<script src="/js/bootstrap.min.js><\/script>') } 
 	</script> 
 	<script src="./js/default.js">
 	</script> 
-	<script>
-	if ($(window).width() > 767) { document.write('<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"><\/script>') } 
-	</script>
 	<script>
 	Waves.displayEffect();
 
@@ -493,9 +477,8 @@
 			}
 		});
 	});
-	</script> 
-	<script src="./js/scripts.min.js">
-	</script> 
-
+	</script>
+	<script src="./js/scripts.min.js"></script> 
+	<script src="./js/jquery.isotope.min.js"></script>
 </body>
 </html>
