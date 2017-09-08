@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'projects',
     'events',
     'accounts',
-    'team'
+    'team',
+    'client',
 ]
 
 
