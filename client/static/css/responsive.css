@@ -1,0 +1,322 @@
+
+/* lg */ 
+@media (min-width: 1200px) {
+
+
+  #portfolio .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  
+
+}
+
+/* md */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+
+
+  .navbar-right {
+    padding: 0 30px 0 0;
+  }
+
+  .navbar-right li a {
+    padding: 35px 15px;
+  }
+
+  .fixed-menu .container {
+    width: 100%;
+  }
+
+  .fixed-menu .navbar-right {
+    padding-right: 30px;
+  }
+
+  .fixed-menu .navbar-right li a {
+    padding: 20px;
+  }
+
+  
+  #countdown li {
+    margin-right: 30px;
+  }
+
+
+  .col-md-9 {
+    z-index: 10;
+  }
+
+  .recent-work-wrap .recent-work-inner h3 a {
+    font-size: 20px;
+  }
+
+  .recent-work-wrap .overlay{
+    padding: 15px;
+  }
+  
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .recent-work-wrap .overlay .preview{
+    line-height: inherit;
+  }
+
+
+}
+
+
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  #main-slider .carousel h1 {
+    font-size: 25px;
+  }
+
+  #main-slider .carousel h2 {
+    font-size: 20px;
+  }
+
+  .recent-work-wrap .overlay{
+   padding: 15px;
+  }
+
+  .recent-work-wrap .recent-work-inner h3 a {
+    font-size: 20px;
+  }
+
+
+  .navbar-brand {
+    width: 215px;
+    height: 60px;
+  }
+
+  .navbar-right {
+    padding: 0;
+  }
+
+  .navbar-right li a {
+    padding:20px 11px;
+    font-size: 17px;
+  }
+
+  .fixed-menu .container {
+    width: 100%;
+  }
+
+  .fixed-menu .navbar-right {
+    padding-right: 30px;
+  }
+
+  .fixed-menu .navbar-right li a {
+    padding: 20px 15px;
+    font-size: 17px;
+  }
+ 
+ #countdown li {
+  margin-right: 15px;
+ }
+
+
+  .watch {
+    left: -8%
+  }
+
+}
+
+/* xs */
+@media (max-width: 767px) {
+
+  #main-slider .carousel h1 {
+    font-size: 25px;
+  }
+
+  #main-slider .carousel h2 {
+    font-size: 16px;
+  }
+  .col-sm-6{
+      text-align:center;
+  }
+
+  .portfolio-item, 
+  #recent-works .col-xs-12.col-sm-4.col-md-3{
+    padding:0 15px;
+  }
+
+  .carousel-caption   {
+    display: none;
+  }
+  .main-nav .container {
+    display: none;
+  }
+  
+  .fixed-menu .container {
+    display: block;
+  }
+
+   .fixed-menu .container {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    width: inherit;
+  }
+
+  .fixed-menu .navbar-right li a {
+    padding: 7px 25px;
+  }
+
+  #home {
+    margin-top: 10%;
+  }
+
+  #main-slider .carousel-caption {
+    bottom: 17%;
+    padding: 10px;
+    line-height: 0;
+  }
+
+  #main-slider .carousel-caption h2 {
+    font-size: 20px;
+    margin-top: 3px;
+  }
+
+  #main-slider .carousel-caption h4 {
+    font-size: 16px;
+  }
+
+  #main-slider .carousel-caption a {
+    font-size: 14px;
+    color: #2da1c5;
+  }
+
+  #explore {
+    background-size:cover;
+  }
+
+  #explore h2 {
+    float: inherit;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }  
+
+  #countdown li {
+    font-size: 14px;
+    margin-right:35px;
+    width:inherit;
+  }
+
+  #countdown li span {
+    font-size: 24px;
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
+  }
+
+  #countdown li:before, 
+  #countdown li:after {
+    top:25px;
+  }
+
+
+  .watch {
+    display: none;
+  }
+
+
+}
+
+/* XS Portrait */
+@media (max-width: 479px) {
+
+  .main-nav .container {
+    display: none;
+  }
+
+  .fixed-menu .container {
+    display: block;
+  }
+
+  .fixed-menu .navbar-right li a {
+    padding: 10px 25px;
+  }
+
+  /* Home */
+
+  #home {
+    margin-top: 18%;
+  }
+
+  .fixed-menu .container {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    width: inherit;
+  }
+
+
+  #main-slider .carousel-caption {
+    bottom: 17%;
+    padding: 10px;
+    line-height: 0;
+  }
+
+  #main-slider .carousel-caption h2 {
+    font-size: 18px;
+    margin-top: 3px;
+  }
+
+  #main-slider .carousel-caption h4 {
+    font-size: 14px;
+  }
+
+  #main-slider .carousel-caption a {
+    font-size: 12px;
+    color: #2da1c5;
+  }
+
+  .carousel-indicators {
+    bottom: 0;
+  }
+
+  /* Explore */
+  #explore {
+    background-size:cover;
+  }
+
+  #explore h2 {
+    float: inherit;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }  
+
+  #countdown li {
+    font-size: 14px;
+    margin-right: 15px;
+    width: 45px;
+  }
+
+  #countdown li span {
+    font-size: 20px;
+    height: 45px;
+    line-height: 45px;
+    width: 45px;
+  }
+
+  #countdown li:before, 
+  #countdown li:after {
+    top: 18px
+  }
+
+
+  .watch {
+    display: none;
+  }
+
+
+}
+
