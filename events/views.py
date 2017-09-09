@@ -37,14 +37,29 @@ def event_create(request):
 
 
 def event_list(request):
-    now = datetime.datetime.now()
-    ongoing = Event.objects.all().filter(start_date__lte=now, end_date__gte=now)
-    upcoming = Event.objects.all().filter(start_date__gte=now)
-    past = Event.objects.all().filter(end_date__lte=now)
-    # queryset_list = Event.objects.all().order_by("-timestamp") # order_by("-timestamp") : to order posts in increasing timestamp
-    # if request.user.is_staff or request.user.is_superuser:
-    #queryset_list = Event.objects.all().order_by("-timestamp")
-    """query = request.GET.get("q")
+
+	now =datetime.datetime.now() 
+	ongoing = Event.objects.all().filter(start_date__lte= now , end_date__gte=now) 
+	upcoming= Event.objects.all().filter(start_date__gte=now)
+	past = Event.objects.all().filter(end_date__lte=now)
+	full_list = []
+	category_list = []
+	for items in ongoing:
+		items.category = "ongoing"
+		full_list.append(items)
+	for items in upcoming:
+		items.category = "upcoming"
+		full_list.append(items)
+	for items in past:
+		items.category = "past"
+		full_list.append(items)
+
+
+	#queryset_list = Event.objects.all().order_by("-timestamp") # order_by("-timestamp") : to order posts in increasing timestamp
+	#if request.user.is_staff or request.user.is_superuser:
+		#queryset_list = Event.objects.all().order_by("-timestamp")
+	"""query = request.GET.get("q")
+
 	if query:
 		queryset_list = queryset_list.filter(
 			Q(event_name__icontains=query) |
@@ -63,39 +78,36 @@ def event_list(request):
 	except EmptyPage:
 	# If page is out of range (e.g. 9999), deliver last page of results.
 		queryset = paginator.page(paginator.num_pages)"""
-    context = {
-        "title": "Event",
-        "queryset1": ongoing,
-        "queryset2": upcoming,
-        "queryset3": past,
-    }
-    return render(request, "events/event_list.html", context)
 
+	context = {
+	"queryset1": full_list,
+	"queryset2": category_list
+	}
+	return render(request, "events/event_list.html",context)
 
-def post_update(request, slug=None):
-    if not request.user.is_staff or not request.user.is_superuser:
-        raise Http404
-    instance = get_object_or_404(Event, slug=slug)
-    form = EventForm(
-        request.POST or None,
-        request.FILES or None,
-        instance=instance)
-    if form.is_valid():
-        instance = form.save(commit=False)
-        instance.save()
-        # message success
+def event_update(request,slug = None):
+	if not request.user.is_staff or not request.user.is_superuser:
+		raise Http404
+	instance = get_object_or_404(Event, slug =slug)
+	form =EventForm(request.POST or None,request.FILES or None,instance = instance )
+	if form.is_valid():
+		instance = form.save(commit = False)
+		instance.save()
+		# message success
+		
+		return HttpResponseRedirect('/') #redirects to detail page
 
-        return HttpResponseRedirect('/')  # redirects to detail page
+	context = {
+			"instance":instance,
+			"title": instance.event_name,   
+			 #inside context we declare variables which can be used in html files
+			"form":form,
+	}
 
-    context = {
-        "instance": instance,
-        "title": instance.event_name,
-        # inside context we declare variables which can be used in html files
-        "form": form,
-    }
+	return render(request,"events/event_form.html",context)
 
-    return render(request, "events/event_form.html", context)
-
+    
+   
 
 def event_delete(request, slug=None):
 
