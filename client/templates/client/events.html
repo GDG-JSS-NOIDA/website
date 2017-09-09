@@ -59,8 +59,8 @@
         top: 0px;
         width: 100%;
         height: 100%;
-        z-index: 9997;    
-        background: url(./img/loader.gif) center no-repeat #fff;     
+        z-index: 9997;
+        background: url(./img/loader.gif) center no-repeat #fff;
      }
     </style>
 
@@ -69,8 +69,8 @@
       $(window).load(function() {
         $(".loader").fadeOut("slow");;
       });
-    </script>	
-	
+    </script>
+
 </head>
 
 <body>
@@ -151,7 +151,7 @@
 					            <div class="center">
 					               <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
 					            </div>
-					        
+
 
 					            <ul class="portfolio-filter text-center">
 					                <li><a class="btn btn-default active" href="#" data-filter="*">All Works</a></li>
@@ -162,6 +162,9 @@
 
 					            <div class="row">
 					                <div class="portfolio-items">
+														{% block content %}
+
+														{% endblock %}
 					                    <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3">
 					                        <div class="recent-work-wrap">
 					                            <img class="img-responsive" src="./img/portfolio/recent/item1.png" alt="">
@@ -170,7 +173,7 @@
 					                                    <h3><a href="#">Business theme</a></h3>
 					                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
 					                                    <a href="#" role="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i> View</a>
-					                                </div> 
+					                                </div>
 					                            </div>
 					                        </div>
 					                    </div><!--/.portfolio-item-->
@@ -179,194 +182,15 @@
 					                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 					                          <div class="modal-dialog" role="document">
 					                            <div class="modal-content">
-					                              
-					                            <button type="button btn-large" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle fa-large" aria-hidden="true"></i></button>              
-					                             
+
+					                            <button type="button btn-large" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle fa-large" aria-hidden="true"></i></button>
+
 					                            </div>
 					                          </div>
-					                        </div>                    
+					                        </div>
 
-					                    <div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3">
-					                        <div class="recent-work-wrap">
-					                            <img class="img-responsive" src="./img/portfolio/recent/item2.png" alt="">
-					                            <div class="overlay">
-					                                <div class="recent-work-inner">
-					                                    <h3><a href="#">Business theme</a></h3>
-					                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-					                                    <a href="#" role="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i> View</a>
-					                                </div> 
-					                            </div>
-					                        </div>          
-					                    </div><!--/.portfolio-item-->
 
-					                            <!-- Modal -->
-					                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-					                          <div class="modal-dialog" role="document">
-					                            <div class="modal-content">
-					                              
-					                            <button type="button btn-large" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle fa-large" aria-hidden="true"></i></button>              
-					                             
-					                            </div>
-					                          </div>
-					                        </div>                    
 
-					                    
-
-					                    <div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-3">
-					                        <div class="recent-work-wrap">
-					                            <img class="img-responsive" src="./img/portfolio/recent/item3.png" alt="">
-					                            <div class="overlay">
-					                                <div class="recent-work-inner">
-					                                    <h3><a href="#">Business theme</a></h3>
-					                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-					                                    <a href="#" role="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i> View</a>
-					                                </div> 
-					                            </div>
-					                        </div>        
-					                    </div><!--/.portfolio-item-->
-
-					                            <!-- Modal -->
-					                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-					                          <div class="modal-dialog" role="document">
-					                            <div class="modal-content">
-					                              
-					                            <button type="button btn-large" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle fa-large" aria-hidden="true"></i></button>              
-					                             
-					                            </div>
-					                          </div>
-					                        </div>                    
-
-					                    
-
-					                    <div class="portfolio-item joomla wordpress apps col-xs-12 col-sm-4 col-md-3">
-					                        <div class="recent-work-wrap">
-					                            <img class="img-responsive" src="./img/portfolio/recent/item4.png" alt="">
-					                            <div class="overlay">
-					                                <div class="recent-work-inner">
-					                                    <h3><a href="#">Business theme</a></h3>
-					                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-					                                    <a href="#" role="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i> View</a>
-					                                </div> 
-					                            </div>
-					                        </div>           
-					                    </div><!--/.portfolio-item-->
-
-					                            <!-- Modal -->
-					                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-					                          <div class="modal-dialog" role="document">
-					                            <div class="modal-content">
-					                              
-					                            <button type="button btn-large" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle fa-large" aria-hidden="true"></i></button>              
-					                             
-					                            </div>
-					                          </div>
-					                        </div>                    
-
-					                    
-					          
-					                    <div class="portfolio-item joomla html bootstrap col-xs-12 col-sm-4 col-md-3">
-					                        <div class="recent-work-wrap">
-					                            <img class="img-responsive" src="./img/portfolio/recent/item5.png" alt="">
-					                            <div class="overlay">
-					                                <div class="recent-work-inner">
-					                                    <h3><a href="#">Business theme</a></h3>
-					                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-					                                    <a href="#" role="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i> View</a>
-					                                </div> 
-					                            </div>
-					                        </div>      
-					                    </div><!--/.portfolio-item-->
-
-					                            <!-- Modal -->
-					                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-					                          <div class="modal-dialog" role="document">
-					                            <div class="modal-content">
-					                              
-					                            <button type="button btn-large" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle fa-large" aria-hidden="true"></i></button>              
-					                             
-					                            </div>
-					                          </div>
-					                        </div>                    
-
-					                    
-
-					                    <div class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-3">
-					                        <div class="recent-work-wrap">
-					                            <img class="img-responsive" src="./img/portfolio/recent/item6.png" alt="">
-					                            <div class="overlay">
-					                                <div class="recent-work-inner">
-					                                    <h3><a href="#">Business theme</a></h3>
-					                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-					                                    <a href="#" role="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i> View</a>
-					                                </div> 
-					                            </div>
-					                        </div>         
-					                    </div><!--/.portfolio-item-->
-
-					                            <!-- Modal -->
-					                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-					                          <div class="modal-dialog" role="document">
-					                            <div class="modal-content">
-					                              
-					                            <button type="button btn-large" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle fa-large" aria-hidden="true"></i></button>              
-					                             
-					                            </div>
-					                          </div>
-					                        </div>                    
-
-					                    
-
-					                    <div class="portfolio-item wordpress html col-xs-12 col-sm-4 col-md-3">
-					                        <div class="recent-work-wrap">
-					                            <img class="img-responsive" src="./img/portfolio/recent/item7.png" alt="">
-					                            <div class="overlay">
-					                                <div class="recent-work-inner">
-					                                    <h3><a href="#">Business theme</a></h3>
-					                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-					                                    <a href="#" role="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i> View</a>
-					                                </div> 
-					                            </div>
-					                        </div>          
-					                    </div><!--/.portfolio-item-->
-
-					                            <!-- Modal -->
-					                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-					                          <div class="modal-dialog" role="document">
-					                            <div class="modal-content">
-					                              
-					                            <button type="button btn-large" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle fa-large" aria-hidden="true"></i></button>              
-					                             
-					                            </div>
-					                          </div>
-					                        </div>                    
-
-					                    
-
-					                    <div class="portfolio-item wordpress html bootstrap col-xs-12 col-sm-4 col-md-3">
-					                        <div class="recent-work-wrap">
-					                            <img class="img-responsive" src="./img/portfolio/recent/item8.png" alt="">
-					                            <div class="overlay">
-					                                <div class="recent-work-inner">
-					                                    <h3><a href="#">Business theme</a></h3>
-					                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-					                                    <a href="#" role="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i> View</a>
-					                                </div> 
-					                            </div>
-					                        </div>          
-					                    </div><!--/.portfolio-item-->
-
-					                            <!-- Modal -->
-					                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-					                          <div class="modal-dialog" role="document">
-					                            <div class="modal-content">
-					                              
-					                            <button type="button btn-large" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle fa-large" aria-hidden="true"></i></button>              
-					                             
-					                            </div>
-					                          </div>
-					                        </div>                    
-
-					                    
 					                </div>
 					            </div>
 					        </div>
@@ -376,7 +200,7 @@
 
 				<!-- End Event Section --><!-- Begin Footer -->
 
-		
+
 				<footer class="footer" id="footer">
 					<div class="row">
 
@@ -457,16 +281,16 @@
 	<script async src="http://www.google-analytics.com/analytics.js">
 	</script>
 	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-43643469-5', 'gdg-x.github.io'); ga('send', 'pageview'); 
-	</script> 
-	<script src="./js/jquery.min.js"></script> 
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-43643469-5', 'gdg-x.github.io'); ga('send', 'pageview');
+	</script>
+	<script src="./js/jquery.min.js"></script>
 	<script>
-	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js><\/script>') 
-	</script> 
-	<script src="./js/bootstrap.min.js"></script> 
-	<script src="./js/default.js"></script> 
-	<script>	Waves.displayEffect(); 	</script> 
-	<script src="./js/scripts.min.js">	</script> 
+	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js><\/script>')
+	</script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/default.js"></script>
+	<script>	Waves.displayEffect(); 	</script>
+	<script src="./js/scripts.min.js">	</script>
 	<script src="./js/jquery.isotope.min.js"></script>
     <script src="./js/wow.min.js"></script>
 </body>
