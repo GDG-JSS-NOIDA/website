@@ -24,7 +24,7 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('accounts.urls')),
-    url(r'^$', TemplateView.as_view(template_name="index.html")),
+    url(r'^', include('client.urls')),
     url(r'^team/',include('team.urls',namespace='team')),
     url(r'^projects/', include('projects.urls')),
     url(r'^events/', include('events.urls')),
