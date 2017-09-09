@@ -6,8 +6,6 @@ class ProjectForm(forms.ModelForm):
     class Meta:
     	model = Project
     	fields = '__all__'
-
-
 class ImageForm(forms.ModelForm):
 	class Meta:
 		model = Image
@@ -18,3 +16,4 @@ class ContributorForm(forms.ModelForm):
 	class Meta:
 		model = Contributors
 		fields = '__all__'
+
