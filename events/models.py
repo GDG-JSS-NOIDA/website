@@ -14,9 +14,7 @@ def upload_location(instance, filename):
 
 
 class Event(models.Model):
-
-	
-  event_name = models.TextField()
+	event_name = models.TextField()
 	updated = models.DateTimeField(auto_now = True, auto_now_add = False)
 	timestamp = models.DateTimeField(auto_now =False, auto_now_add = True)
 	start_date = models.DateTimeField(default=datetime.date.today)
@@ -29,14 +27,13 @@ class Event(models.Model):
 	reg_link = models.URLField(max_length = 120)
 	created_by = models.CharField(max_length= 255)
 	slug = models.SlugField(unique=True)
-
-
-  
-    def __str__(self):
-        return self.event_name
-
-    def get_absolute_url(self):  # it can be used in a href in html
-        return reverse("event:detail", kwargs={"slug": self.slug})
+	
+	def __str__(self):
+		return self.event_name
+	
+	# it can be used in a href in html
+	def get_absolute_url(self):
+		return reverse("event:detail", kwargs={"slug": self.slug})
 
 
 def create_slug(instance, new_slug=None):  # slug implementation

@@ -134,27 +134,27 @@ def event_detail(request, slug=None):
     return render(request, "event_detail.html", context)
 
 
-def event_update(request, slug=None):
-    if not request.user.is_staff or not request.user.is_superuser:
-        raise Http404
-    instance = get_object_or_404(Post, slug=slug)
-    form = EventForm(
-        request.POST or None,
-        request.FILES or None,
-        instance=instance)
-    if form.is_valid():
-        instance = form.save(commit=False)
-        instance.save()
-        # message success
+# def event_update(request, slug=None):
+#     if not request.user.is_staff or not request.user.is_superuser:
+#         raise Http404
+#     instance = get_object_or_404(Post, slug=slug)
+#     form = EventForm(
+#         request.POST or None,
+#         request.FILES or None,
+#         instance=instance)
+#     if form.is_valid():
+#         instance = form.save(commit=False)
+#         instance.save()
+#         # message success
 
-        return HttpResponseRedirect(
-            instance.get_absolute_url())  # redirects to detail page
+#         return HttpResponseRedirect(
+#             instance.get_absolute_url())  # redirects to detail page
 
-    context = {
-        "instance": instance,
-        "title": instance.event_name,
-        # inside context we declare variables which can be used in html files
-        "form": form
-    }
+#     context = {
+#         "instance": instance,
+#         "title": instance.event_name,
+#         # inside context we declare variables which can be used in html files
+#         "form": form
+#     }
 
-    return render(request, "event_form.html", context)
+#     return render(request, "event_form.html", context)
