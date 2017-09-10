@@ -179,8 +179,8 @@
 												{% for image in project.image_set.all %}
 													<div class="col-md-4">
 													{% if image %}
+														<img src="/{{image.picture}}" width="200px" height="200px" style="padding-bottom: 10px;"><br>
 														<p>{{image | upper}}</p>
-														<img src="/{{image.picture}}" width="200px" height="200px"><br>
 													{% endif %}
 													</div>
 												{% endfor %}
