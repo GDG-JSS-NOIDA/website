@@ -19,7 +19,7 @@ class Project(models.Model):
 class Image(models.Model):
     name = models.CharField(max_length=100)
     project = models.ForeignKey(Project)
-    picture = models.ImageField(upload_to='projects', blank=True, null=True)
+    picture = models.ImageField(upload_to='media/projects/', blank=True, null=True)
 
     def __str__(self):
         return self.name

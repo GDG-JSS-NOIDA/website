@@ -9,5 +9,4 @@ urlpatterns = [
     url(r'^create/$',views.CreateMember.as_view(),name='create'),
     url(r'^edit/(?P<pk>\d+)/$',views.EditMember.as_view(),name='edit'),
     url(r'^delete/(?P<pk>\d+)/$',views.DeleteMember.as_view(),name='delete'),
-
 ]

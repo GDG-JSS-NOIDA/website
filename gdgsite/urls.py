@@ -25,8 +25,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^', include('client.urls')),
-    url(r'^team/',include('team.urls',namespace='team')),
-    url(r'^projects/', include('projects.urls')),
-    url(r'^events/', include('events.urls')),
-    url(r'^register/',include('register.urls')),
+    # url(r'^team/',include('team.urls',namespace='team')),
+    # url(r'^projects/', include('projects.urls')),
+    # url(r'^events/', include('events.urls')),
+    # url(r'^register/',include('register.urls')),
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
