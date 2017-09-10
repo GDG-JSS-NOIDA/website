@@ -1,18 +1,475 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>This is the list of our team members!</h1>
-    {% block content %}
+<!-- saved from url=(0037)https://gdgjss.inteam/ -->
 
-      {% for member in member_details %}
-        <p>{{member.name}} and is {{member.status}} of GDG</p>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="Google Developer Groups are for developers who are interested in Google's developer technology." name="description">
+	<meta content="event, gdg, jss, noida, google, programming, android, chrome, developers, web, mobile" name="keywords">
+	<meta content="b9imDOrFawXaBXCC4r3uJDdswSYcalD-wWpMYhFq-no" name="google-site-verification">
+	<link href="https:/gdgjss.in" rel="canonical"><!-- Social: Twitter -->
+	<meta content="summary" name="twitter:card">
+	<meta content="GDG" name="twitter:site">
+	<meta content="GDG JSS NOIDA" name="twitter:title">
+	<meta content="Google Developer Groups are for developers who are interested in Google's developer technology." name="twitter:description">
+	<meta content="/img/seo/sharing-twitter.png" name="twitter:image:src"><!-- Social: Facebook / Open Graph -->
+	<meta content="GDG JSS NOIDA" property="og:title">
+	<meta content="GDG JSS NOIDA" property="og:site_name">
+	<meta content="website" property="og:type">
+	<meta content="https://gdgjss.in" property="og:url">
+	<meta content="/img/seo/sharing-facebook.png" property="og:image">
+	<meta content="Google Developer Groups are for developers who are interested in Google's developer technology." property="og:description">
 
-      {% endfor %}
+	<title>Team • GDG JSS NOIDA</title>
+	<link href="/img/favicons/favicon.ico" rel="shortcut icon">
+	<link href="/img/favicons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+	<link href="/img/favicons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+	<link href="/img/favicons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+	<link href="/img/favicons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+	<link href="/img/favicons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+	<link href="/img/favicons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+	<link href="/img/favicons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+	<link href="/img/favicons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+	<link href="/img/favicons/favicon-196x196.png" rel="icon" type="image/png">
+	<link href="/img/favicons/favicon-160x160.png" rel="icon" type="image/png">
+	<link href="/img/favicons/favicon-96x96.png" rel="icon" type="image/png">
+	<link href="/img/favicons/favicon-32x32.png" rel="icon" type="image/png">
+	<link href="/img/favicons/favicon-16x16.png" rel="icon" type="image/png">
+	<meta content="#2b5797" name="msapplication-TileColor">
+	<meta content="/img/favicons/mstile-144x144.png" name="msapplication-TileImage">
+	<meta content="/img/favicons/browserconfig.xml" name="msapplication-config">
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	<link href="./css/main.css" rel="stylesheet"><!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
-    {% endblock %}
-  </body>
+
+    <!-- Loader -->
+    <style>
+     .no-js #loader { display: none;  }
+     .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+     .loader {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9997;
+        background: url(./img/loader.gif) center no-repeat #fff;
+     }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery//1.12.4/jquery.min.js"></script>
+    <script>
+      $(window).load(function() {
+        $(".loader").fadeOut("slow");;
+      });
+    </script>
+
+</head>
+
+<body>
+	<div class="loader"></div>
+
+
+
+
+	<div class="st-container" id="st-container">
+		<div class="st-pusher">
+			<div class="st-content">
+				<!-- Begin Top Section -->
+
+				<section class="top-section image-section" id="top-section" style="background: #0f9d58">
+					<div class="overlay gradient-overlay">
+					</div>
+
+
+					<header class="top-header" id="top-header">
+						<div class="overlay white-solid">
+						</div>
+						<svg class="menu-trigger icon icon-menu visible-xs" id="menu-trigger" viewbox="0 0 32 32">
+						<use xlink:href="/img/sprites/sprites.svg#icon-menu">
+						</use></svg> <a class="logo-header" href="https://gdgjss.in" id="logo-header">
+						<div class="logo logo-light">
+						</div></a>
+
+						<nav class="st-menu st-effect" id="menu">
+							<div class="logo-navbar logo logo-dark visible-xs">
+							</div>
+
+
+							<ul>
+								<li>
+									<a class="" href="/">Home</a>
+								</li>
+
+
+								<li>
+									<a class="" href="/events.html">Events</a>
+								</li>
+
+
+								<li>
+									<a class="" href="/team.html">Team</a>
+								</li>
+
+
+							</ul>
+
+
+
+							<ul class="bottom-navlinks visible-xs" id="bottom-navlinks">
+								<li>
+									<a href="/register.html">Register</a>
+								</li>
+							</ul>
+							<a class="right-nav-button right-nav-button-hidden btn btn-primary waves-effect waves-button waves-light waves-float pull-right hidden-xs hidden-sm" href="/register.html">Register</a>
+						</nav>
+					</header>
+
+
+					<div class="content-wrapper">
+						<div class="jumbotron text-left">
+							<div class="animated fadeInLeft visible" data-animation="fadeInLeft" data-delay="500">
+								<h1>Team</h1>
+								{% for member in member_details %}
+									<p>{{member.name}} and is {{member.status}} of GDG</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End Top Section --><!-- Begin Team List-->
+
+				<section class="team" id="team">
+					<div class="content-wrapper">
+						<div class="col-lg-10 col-lg-offset-1">
+							<h3>About us</h3>
+
+
+							<p class="text-left animated hiding" data-animation="fadeInUp" data-delay="0">Google's services have become synonymous with simple things online. Number of technological innovations and IT industries in which Google is creating new products is enormous. It's hard to get to know all of them, but realistic. This is why people have started to gather in small local groups and share their experience. Later, the following groups have been called Google Developer Groups. GDGs can take many forms -- from just a few people getting together to watch some videos, to large gatherings with demos, tech talks, hackathons and conferences.</p>
+						</div>
+
+
+						<div class="col-lg-10 col-lg-offset-1 text-center">
+							<h4 class="text-left animated hiding appear-animation-trigger" data-animation="fadeInUp" data-delay="0">Head Organizers</h4>
+
+
+							<div class="effect-wrapper col-md-4 col-sm-6 col-xs-12 cols-centered appear-animation" style="transition-delay: 0.03901s; transition-duration: 0.2s;">
+								<div class="zoe-effect" data-target="#speakerDetail-0" data-toggle="modal">
+									<figure class="waves-effect waves-block waves-light" style="background-image: url(/img/people/VitaliyZasadnyy.jpg)">
+										<div class="overlay solid-overlay">
+										</div>
+
+
+										<figcaption>
+											<div class="col-md-8 col-xs-8 text-left">
+												<h2 class="name">Vitaliy <span>Zasadnyy</span></h2>
+
+
+												<div class="clearfix">
+												</div>
+												<span class="position">Sponsors and Speakers Manager</span>
+											</div>
+											<a href="https://google.com/+VitalikZasadnyy" target="_blank"><svg class="icon icon-google-plus" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-google-plus">
+											</use></svg></a> <a href="https://twitter.com/zasadnyy" target="_blank"><svg class="icon icon-twitter" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-twitter">
+											</use></svg></a> <a href="https://github.com/zasadnyy" target="_blank"><svg class="icon icon-github" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-github">
+											</use></svg></a> <a href="http://zasadnyy.com/" target="_blank"><svg class="icon icon-site" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-site">
+											</use></svg></a>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+
+
+							<div class="effect-wrapper col-md-4 col-sm-6 col-xs-12 cols-centered appear-animation" style="transition-delay: 0.18753s; transition-duration: 0.2s;">
+								<div class="zoe-effect" data-target="#speakerDetail-1" data-toggle="modal">
+									<figure class="waves-effect waves-block waves-light" style="background-image: url(/img/people/OlehZasadnyy.jpg)">
+										<div class="overlay solid-overlay">
+										</div>
+
+
+										<figcaption>
+											<div class="col-md-8 col-xs-8 text-left">
+												<h2 class="name">Oleh <span>Zasadnyy</span></h2>
+
+
+												<div class="clearfix">
+												</div>
+												<span class="position">Designer and Web Developer</span>
+											</div>
+											<a href="https://google.com/+OlehZasadnyy" target="_blank"><svg class="icon icon-google-plus" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-google-plus">
+											</use></svg></a> <a href="https://github.com/ozasadnyy" target="_blank"><svg class="icon icon-github" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-github">
+											</use></svg></a>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+
+
+							<div class="effect-wrapper col-md-4 col-sm-6 col-xs-12 cols-centered appear-animation" style="transition-delay: 0.33558s; transition-duration: 0.2s;">
+								<div class="zoe-effect" data-target="#speakerDetail-2" data-toggle="modal">
+									<figure class="waves-effect waves-block waves-light" style="background-image: url(/img/people/OstapAndrusiv.jpg)">
+										<div class="overlay solid-overlay">
+										</div>
+
+
+										<figcaption>
+											<div class="col-md-8 col-xs-8 text-left">
+												<h2 class="name">Ostap <span>Andrusiv</span></h2>
+
+
+												<div class="clearfix">
+												</div>
+												<span class="position">Sponsors and Speakers Manager</span>
+											</div>
+											<a href="https://google.com/+OstapAndrusiv" target="_blank"><svg class="icon icon-google-plus" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-google-plus">
+											</use></svg></a> <a href="https://twitter.com/p1f" target="_blank"><svg class="icon icon-twitter" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-twitter">
+											</use></svg></a> <a href="http://andrusiv.com/" target="_blank"><svg class="icon icon-site" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-site">
+											</use></svg></a>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="col-lg-10 col-lg-offset-1 text-center">
+							<h4 class="text-left animated hiding appear-animation-trigger" data-animation="fadeInUp" data-delay="0">Organizers</h4>
+
+
+							<div class="effect-wrapper col-md-4 col-sm-6 col-xs-12 cols-centered appear-animation" style="transition-delay: 0.11327s; transition-duration: 0.2s;">
+								<div class="zoe-effect" data-target="#speakerDetail-4" data-toggle="modal">
+									<figure class="waves-effect waves-block waves-light" style="background-image: url(/img/people/DmytroDanylyk.jpg)">
+										<div class="overlay solid-overlay">
+										</div>
+
+
+										<figcaption>
+											<div class="col-md-8 col-xs-8 text-left">
+												<h2 class="name">Dmytro <span>Danylyk</span></h2>
+
+
+												<div class="clearfix">
+												</div>
+												<span class="position">Android Program Committee</span>
+											</div>
+											<a href="https://plus.google.com/+DmytroDanylyk" target="_blank"><svg class="icon icon-google-plus" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-google-plus">
+											</use></svg></a> <a href="https://twitter.com/dmytrodanylyk" target="_blank"><svg class="icon icon-twitter" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-twitter">
+											</use></svg></a> <a href="https://github.com/dmytrodanylyk" target="_blank"><svg class="icon icon-github" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-github">
+											</use></svg></a>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+
+
+							<div class="effect-wrapper col-md-4 col-sm-6 col-xs-12 cols-centered appear-animation" style="transition-delay: 0.26179s; transition-duration: 0.2s;">
+								<div class="zoe-effect" data-target="#speakerDetail-7" data-toggle="modal">
+									<figure class="waves-effect waves-block waves-light" style="background-image: url(/img/people/ValentynShybanov.jpg)">
+										<div class="overlay solid-overlay">
+										</div>
+
+
+										<figcaption>
+											<div class="col-md-8 col-xs-8 text-left">
+												<h2 class="name">Valentyn <span>Shybanov</span></h2>
+
+
+												<div class="clearfix">
+												</div>
+												<span class="position">Web and Cloud Program Committee</span>
+											</div>
+											<a href="https://google.com/+ValentynShybanov" target="_blank"><svg class="icon icon-google-plus" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-google-plus">
+											</use></svg></a> <a href="http://olostan.name/" target="_blank"><svg class="icon icon-site" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-site">
+											</use></svg></a>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="col-lg-10 col-lg-offset-1 text-center">
+							<h4 class="text-left animated hiding appear-animation-trigger" data-animation="fadeInUp" data-delay="0">Alumni</h4>
+
+
+							<div class="effect-wrapper col-md-4 col-sm-6 col-xs-12 cols-centered appear-animation" style="transition-delay: 0.11327s; transition-duration: 0.2s;">
+								<div class="zoe-effect" data-target="#speakerDetail-4" data-toggle="modal">
+									<figure class="waves-effect waves-block waves-light" style="background-image: url(/img/people/DmytroDanylyk.jpg)">
+										<div class="overlay solid-overlay">
+										</div>
+
+
+										<figcaption>
+											<div class="col-md-8 col-xs-8 text-left">
+												<h2 class="name">Dmytro <span>Danylyk</span></h2>
+
+
+												<div class="clearfix">
+												</div>
+												<span class="position">Android Program Committee</span>
+											</div>
+											<a href="https://plus.google.com/+DmytroDanylyk" target="_blank"><svg class="icon icon-google-plus" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-google-plus">
+											</use></svg></a> <a href="https://twitter.com/dmytrodanylyk" target="_blank"><svg class="icon icon-twitter" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-twitter">
+											</use></svg></a> <a href="https://github.com/dmytrodanylyk" target="_blank"><svg class="icon icon-github" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-github">
+											</use></svg></a>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+
+
+							<div class="effect-wrapper col-md-4 col-sm-6 col-xs-12 cols-centered appear-animation" style="transition-delay: 0.26179s; transition-duration: 0.2s;">
+								<div class="zoe-effect" data-target="#speakerDetail-7" data-toggle="modal">
+									<figure class="waves-effect waves-block waves-light" style="background-image: url(/img/people/ValentynShybanov.jpg)">
+										<div class="overlay solid-overlay">
+										</div>
+
+
+										<figcaption>
+											<div class="col-md-8 col-xs-8 text-left">
+												<h2 class="name">Valentyn <span>Shybanov</span></h2>
+
+
+												<div class="clearfix">
+												</div>
+												<span class="position">Web and Cloud Program Committee</span>
+											</div>
+											<a href="https://google.com/+ValentynShybanov" target="_blank"><svg class="icon icon-google-plus" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-google-plus">
+											</use></svg></a> <a href="http://olostan.name/" target="_blank"><svg class="icon icon-site" viewbox="0 0 30 32">
+											<use xlink:href="/img/sprites/sprites.svg#icon-site">
+											</use></svg></a>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+
+					</div>
+				</section>
+				<!-- End Team List --><!-- Begin Footer -->
+
+
+				<footer class="footer" id="footer">
+					<div class="row">
+
+
+
+						<div class="logo logo-footer logo-gray pull-right">
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-md-4 col-xs-6">
+							<h5>Links</h5>
+
+
+							<ul>
+								<li>
+									<a href="https://developers.google.com/groups" target="_blank">Google Developers</a>
+								</li>
+							</ul>
+						</div>
+
+
+						<div class="col-md-4 col-xs-6">
+							<h5>Contacts</h5>
+
+
+							<ul>
+								<li>
+									<a href="mailto:gdgjssn@gmail.com" target="_blank">gdgjssn@gmail.com</a>
+								</li>
+							</ul>
+						</div>
+
+
+					</div>
+
+
+					<div class="row">
+						<div class="col-md-6 col-xs-12">
+							<ul class="social-links">
+								<li>
+									<a href="https://plus.google.com/+GDGJSSNoida" target="_blank"><svg class="icon icon-google-plus" viewbox="0 0 30 32">
+									<use xlink:href="/img/sprites/sprites.svg#icon-google-plus">
+									</use></svg></a>
+								</li>
+
+
+								<li>
+									<a href="https://www.facebook.com/gdgjss/" target="_blank"><svg class="icon icon-facebook" viewbox="0 0 30 32">
+									<use xlink:href="/img/sprites/sprites.svg#icon-facebook">
+									</use></svg></a>
+								</li>
+
+
+								<li>
+									<a href="https://github.com/GDG-JSS-NOIDA/" target="_blank"><svg class="icon icon-github" viewbox="0 0 30 32">
+									<use xlink:href="/img/sprites/sprites.svg#icon-github">
+									</use></svg></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-md-6">
+							<p class="copyright">Based on <a href="https://github.com/gdg-x/zeppelin" target="_blank">Project Zeppelin</a>. Built with <i class="fa fa-fw fa-coffee"></i> and <i class="fa fa-fw fa-heart"></i> by <a href="#">GDG JSS Noida.</a></p>
+						</div>
+					</div>
+				</footer>
+				<!-- End Footer -->
+			</div>
+		</div>
+	</div>
+
+
+	<script async src="http://www.google-analytics.com/analytics.js">
+	</script>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-43643469-5', 'gdg-x.github.io'); ga('send', 'pageview');
+	</script>
+	<script src="./js/jquery.min.js">
+	</script>
+	<script>
+	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js><\/script>')
+	</script>
+	<script src="./js/bootstrap.min.js">	</script>
+	<script>
+	if (typeof($.fn.modal) === 'undefined') { document.write('<script src="/js/bootstrap.min.js><\/script>') }
+	</script>
+	<script src="./js/default.js">	</script>
+	<script>	Waves.displayEffect(); 	</script>
+	<script src="./js/scripts.min.js">	</script>
+	<script src="./js/jquery.isotope.min.js"></script>
+</body>
 </html>
