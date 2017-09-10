@@ -154,31 +154,39 @@
 					    <section id="portfolio">
 					        <div class="container">
 					            <div class="center">
-					               <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+					               <p class="lead">We at GDG work with collaboration and commitment and try to contribute whenever and whatever we could. <br> Anyone can see and contribute to our projects, as we believe so much in open source all our projects are open source.</p>
 					            </div>
 
 
-					            <ul class="portfolio-filter text-center">
+					            <!-- <ul class="portfolio-filter text-center">
 					                <li><a class="btn btn-default active" href="#" data-filter="*">All Works</a></li>
 					                <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Active</a></li>
 					                <li><a class="btn btn-default" href="#" data-filter=".html">Past</a></li>
-					            </ul><!--/#portfolio-filter-->
+					            </ul> --><!--/#portfolio-filter-->
 
 					            <div class="row">
 					                {% for project in projects %}
-										<h3>{{project.name}}</h3>
+										<h3>{{project.name |upper}}</h3>
+
 										<p>{{project.description}}<br>
 										{{project.github_repo}}<br>
 										{{project.live_link}}</p>
 										{% for contributor in project.contributors_set.all %}
 											<h3>{{contributor.name}}</h3>
 										{% endfor %}
-										{% for image in project.image_set.all %}
-											{% if image %}
-												<h3>image: {{image}}</h3>
-												<img src="{{image.url}}" width="200px" height="200px"><br>
-											{% endif %}
-										{% endfor %}
+										<div class="row">
+											<center>
+												{% for image in project.image_set.all %}
+													<div class="col-md-4">
+													{% if image %}
+														<p>{{image | upper}}</p>
+														<img src="{{image.url}}" width="200px" height="200px"><br>
+													{% endif %}
+													</div>
+												{% endfor %}
+											</center>
+										</div>
+										<br><hr>
 									{% endfor %}
 
 					            </div>
