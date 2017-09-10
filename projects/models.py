@@ -29,6 +29,7 @@ class Image(models.Model):
 class Contributors(models.Model):
     name = models.OneToOneField(Team)
     project = models.ManyToManyField(Project)
+    
 
     def __str__(self):
         return self.name.name
