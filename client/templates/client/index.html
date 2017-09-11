@@ -82,8 +82,8 @@
         top: 0px;
         width: 100%;
         height: 100%;
-        z-index: 9997;    
-        background: url(../../static/img/loader.gif) center no-repeat #fff;     
+        z-index: 9997;
+        background: url(../../static/img/loader.gif) center no-repeat #fff;
      }
     </style>
 
@@ -92,7 +92,7 @@
       $(window).load(function() {
         $(".loader").fadeOut("slow");;
       });
-    </script>	
+    </script>
 
 </head>
 
@@ -134,6 +134,11 @@
 								<li>
 									<a class="" href={% url 'team' %}>Team</a>
 								</li>
+
+								<li>
+									<a class="" href={% url 'projects' %}>Projects</a>
+								</li>
+
 
 
 							</ul>
@@ -327,28 +332,28 @@
 								          <div class="img-desc-layer">
 								            <p class="img-desc"><h3>This is image 1</h3></p>
 								          </div>
-								        
+
 								</div>
 
 
 								<div class="post col-md-4 col-sm-4 text-left animated hiding imgWrap" data-animation="fadeInDown" data-delay="500">
-									
-							    
+
+
 							          <img class="img-responsive imgImg" src={% static 'img/hackathon/hackathon-1.png' %}>
 							          <div class="img-desc-layer">
 							            <p class="img-desc"><h3>This is image 2</h3></p>
 							          </div>
-							        
+
 								</div>
 
 
 								<div class="post col-md-4 col-sm-4 text-left animated hiding imgWrap" data-animation="fadeInDown" data-delay="500">
-							
+
 							          <img class="img-responsive imgImg" src={% static 'img/hackathon/hackathon-2.png' %}>
 							          <div class="img-desc-layer">
 							            <p class="img-desc"><h3>This is image 3</h3></p>
 							          </div>
-							      	
+
 								</div>
 							</article>
 
@@ -364,7 +369,7 @@
 								  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBDH5mPzRXT8JI9m01mXhsesDQEX4Tl8oY
 								    &q=place_id:ChIJf1Y03EHlDDkRGWvWI8sn0E8" allowfullscreen>
 						</iframe>
-	
+
 
 				</section>
 				<!-- End Location Section --><!-- Begin Footer -->
@@ -442,8 +447,8 @@
 						<div class="col-md-4">
 							<p class="copyright">Based on <a href="https://github.com/gdg-x/zeppelin" target="_blank">Project Zeppelin</a>. Built with <i class="fa fa-fw fa-coffee"></i> and <i class="fa fa-fw fa-heart"></i> by <a href="#">GDG JSS Noida.</a></p>
 						</div>
-			        
-					
+
+
 					</div>
 
 
@@ -454,15 +459,15 @@
 	</div>
 	<script async src="http://www.google-analytics.com/analytics.js"></script>
 	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-43643469-5', 'gdg-x.github.io'); ga('send', 'pageview'); 
-	</script> 
- 
-	<script src={% static 'js/bootstrap.min.js' %}>	</script> 
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-43643469-5', 'gdg-x.github.io'); ga('send', 'pageview');
+	</script>
+
+	<script src={% static 'js/bootstrap.min.js' %}>	</script>
 	<script>
-	if (typeof($.fn.modal) === 'undefined') { document.write('<script src="/js/bootstrap.min.js><\/script>') } 
-	</script> 
+	if (typeof($.fn.modal) === 'undefined') { document.write('<script src="/js/bootstrap.min.js><\/script>') }
+	</script>
 	<script src={% static 'js/default.js' %}>
-	</script> 
+	</script>
 	<script>
 	Waves.displayEffect();
 
@@ -479,7 +484,7 @@
 		});
 	});
 	</script>
-	<script src={% static 'js/scripts.min.js' %}></script> 
+	<script src={% static 'js/scripts.min.js' %}></script>
 	<script src={% static 'js/jquery.isotope.min.js' %}></script>
 </body>
 </html>

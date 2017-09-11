@@ -146,48 +146,59 @@
 
 
 
-
 					    <section id="portfolio">
 					        <div class="container">
 					            <div class="center">
-					               <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+					               <p class="lead">We have conducted many successful events till date</p>
 					            </div>
 
 
 					            <ul class="portfolio-filter text-center">
-					                <li><a class="btn btn-default active" href="#" data-filter="*">All Works</a></li>
-					                <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Creative</a></li>
-					                <li><a class="btn btn-default" href="#" data-filter=".html">Photography</a></li>
-					                <li><a class="btn btn-default" href="#" data-filter=".wordpress">Web Development</a></li>
+					                <li><a class="btn btn-default active" href="#" data-filter=".all">All</a></li>
+					                <li><a class="btn btn-default" href="#" data-filter=".upcoming">Upcoming</a></li>
+					                <li><a class="btn btn-default" href="#" data-filter=".ongoing">Ongoing</a></li>
+					                <li><a class="btn btn-default" href="#" data-filter=".past">Past</a></li>
 					            </ul><!--/#portfolio-filter-->
 
 					            <div class="row">
 					                <div class="portfolio-items">
-											{% include '../events/event_list.html' %}
-					                    <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3">
-					                        <div class="recent-work-wrap">
-					                            <img class="img-responsive" src="./img/portfolio/recent/item1.png" alt="">
-					                            <div class="overlay">
-					                                <div class="recent-work-inner">
-					                                    <h3><a href="#">Business theme</a></h3>
-					                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-					                                    <a href="#" role="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i> View</a>
-					                                </div>
-					                            </div>
-					                        </div>
-					                    </div><!--/.portfolio-item-->
+        								{% for obj in queryset1 %}
+						                    <div class="portfolio-item all {{ obj.category }} col-xs-12 col-sm-4 col-md-3">
+						                        <div class="recent-work-wrap">
+						                            <img class="img-responsive" src="/media/{{obj.img}}" alt="">
+						                            <div class="overlay">
+						                                <div class="recent-work-inner">
+						                                    <h3><a href="#">{{ obj.event_name }}</a></h3>
+						                                    <p>{{ obj.content }}</p>
+						                                    <a href="#" role="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i> View</a>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div><!--/.portfolio-item-->
 
 					                            <!-- Modal -->
 					                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 					                          <div class="modal-dialog" role="document">
 					                            <div class="modal-content">
+											        <h3><p>{{ obj.event_name }}</a><small> &nbsp; {{ obj.timestamp | timesince  }} ago</p></small></h3>
+													<p><b>Created By</b> : {{ obj.created_by}} </p>
+													<p>Desc:{{ obj.content}}</p>
+													<p>Start Date:{{obj.start_date}}</p>
+													<p>End Date:{{obj.end_date}}</p>
+													<p>Speaker:{{obj.speaker}}</p>
+													<p>Registration link:{{obj.reg_link}}</p>
+													<p>Category: {{ obj.category }}</p>
+
 
 					                            <button type="button btn-large" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle fa-large" aria-hidden="true"></i></button>
+
+					                       
 
 					                            </div>
 					                          </div>
 					                        </div>
-
+        												                
+    {% endfor %}
 
 
 					                </div>

@@ -37,7 +37,6 @@ def event_create(request):
 
 
 def event_list(request):
-
 	now =datetime.datetime.now() 
 	ongoing = Event.objects.all().filter(start_date__lte= now , end_date__gte=now) 
 	upcoming= Event.objects.all().filter(start_date__gte=now)
@@ -53,31 +52,6 @@ def event_list(request):
 	for items in past:
 		items.category = "past"
 		full_list.append(items)
-
-
-	#queryset_list = Event.objects.all().order_by("-timestamp") # order_by("-timestamp") : to order posts in increasing timestamp
-	#if request.user.is_staff or request.user.is_superuser:
-		#queryset_list = Event.objects.all().order_by("-timestamp")
-	"""query = request.GET.get("q")
-
-	if query:
-		queryset_list = queryset_list.filter(
-			Q(event_name__icontains=query) |
-			Q(content__icontains=query)
-			).distinct()
-	paginator = Paginator(queryset_list, 1000) # Show 25 contacts per page
-	page_request_var ="page"
-	page = request.GET.get("page_request_var")
-
-
-	try:
-		queryset = paginator.page(page)
-	except PageNotAnInteger:
-	# If page is not an integer, deliver first page.
-		queryset = paginator.page(1)
-	except EmptyPage:
-	# If page is out of range (e.g. 9999), deliver last page of results.
-		queryset = paginator.page(paginator.num_pages)"""
 
 	context = {
 	"queryset1": full_list,

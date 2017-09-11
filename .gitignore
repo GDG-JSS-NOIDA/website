@@ -106,3 +106,5 @@ ENV/
 # macos
 .vscode/
 .DS_Store
+
+media/
