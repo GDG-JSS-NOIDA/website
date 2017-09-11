@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from projects.models import *
+from team.models import *
 
 # Create your views here.
 def index(request):
@@ -9,7 +10,8 @@ def events(request):
     return render(request, 'client/events.html')
 
 def team(request):
-    return render(request, 'client/team.html')
+    team = Team.objects.all()
+    return render(request, 'client/team.html', {'teams': team})
 
 def register(request):
     return render(request, 'client/register.html')
@@ -17,4 +19,3 @@ def register(request):
 def projects(request):
     project = Project.objects.all()
     return render(request, 'client/projects.html', {'projects': project})
-
