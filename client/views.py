@@ -9,8 +9,8 @@ def index(request):
 
 def events(request):
 	event  = Event.objects.all()
-	now =datetime.datetime.now() 
-	ongoing = Event.objects.all().filter(start_date__lte= now , end_date__gte=now) 
+	now =datetime.datetime.now()
+	ongoing = Event.objects.all().filter(start_date__lte= now , end_date__gte=now)
 	upcoming= Event.objects.all().filter(start_date__gte=now)
 	past = Event.objects.all().filter(end_date__lte=now)
 	full_list = []
@@ -26,7 +26,7 @@ def events(request):
 	print (full_list)
 	context = {
 	"queryset1": full_list,
-	}	
+	}
 	return render(request, 'client/events.html',context)
 
 def team(request):
