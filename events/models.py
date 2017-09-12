@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from django.db import models
-import datetime
+from django.utils import timezone
 from django.db.models import TimeField
 from django.core.urlresolvers import reverse  # to use get_absolute_url
 # to implement slug (a dynamic name for posts not just the id)
@@ -17,8 +17,8 @@ class Event(models.Model):
 	event_name = models.TextField()
 	updated = models.DateTimeField(auto_now = True, auto_now_add = False)
 	timestamp = models.DateTimeField(auto_now =False, auto_now_add = True)
-	start_date = models.DateTimeField(default=datetime.date.today)
-	end_date = models.DateTimeField(default=datetime.date.today)
+	start_date = models.DateTimeField(default=timezone.now)
+	end_date = models.DateTimeField(default=timezone.now)
 	#start_time =  models.TimeField()
 	#end_time =  models.TimeField()
 	content = models.TextField()
