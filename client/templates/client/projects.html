@@ -103,21 +103,21 @@
 
 							<ul>
 								<li>
-									<a class="" href="/">Home</a>
+									<a class="" href={% url 'index' %}>Home</a>
 								</li>
 
 
 								<li>
-									<a class="" href="/events">Events</a>
+									<a class="" href={% url 'events' %}>Events</a>
 								</li>
 
 
 								<li>
-									<a class="" href="/team">Team</a>
+									<a class="" href={% url 'team' %}>Team</a>
 								</li>
 
 								<li>
-									<a class="" href="/projects">Projects</a>
+									<a class="current" href={% url 'projects' %}>Projects</a>
 								</li>
 
 
