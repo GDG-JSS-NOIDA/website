@@ -2472,7 +2472,7 @@ time {
 	transform: translate(0)
 }
 nav ul {
-	float: left;
+	float: right;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -2539,7 +2539,7 @@ nav li a.current, nav li a:hover {
 	fill: #464646
 }
 .menu-trigger {
-	float: right;
+	float: right; /* changed to right from left*/
 	-webkit-transform: translateY(20px);
 	-ms-transform: translateY(20px);
 	transform: translateY(20px);

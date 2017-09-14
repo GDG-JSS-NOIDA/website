@@ -37,51 +37,50 @@ def event_create(request):
 
 
 def event_list(request):
-	now =datetime.datetime.now() 
-	ongoing = Event.objects.all().filter(start_date__lte= now , end_date__gte=now) 
-	upcoming= Event.objects.all().filter(start_date__gte=now)
-	past = Event.objects.all().filter(end_date__lte=now)
-	full_list = []
-	category_list = []
-	for items in ongoing:
-		items.category = "ongoing"
-		full_list.append(items)
-	for items in upcoming:
-		items.category = "upcoming"
-		full_list.append(items)
-	for items in past:
-		items.category = "past"
-		full_list.append(items)
+    now = datetime.datetime.now()
+    ongoing = Event.objects.all().filter(start_date__lte=now, end_date__gte=now)
+    upcoming = Event.objects.all().filter(start_date__gte=now)
+    past = Event.objects.all().filter(end_date__lte=now)
+    full_list = []
+    category_list = []
+    for items in ongoing:
+        items.category = "ongoing"
+        full_list.append(items)
+    for items in upcoming:
+        items.category = "upcoming"
+        full_list.append(items)
+    for items in past:
+        items.category = "past"
+        full_list.append(items)
 
-	context = {
-	"queryset1": full_list,
-	"queryset2": category_list
-	}
-	return render(request, "events/event_list.html",context)
+    context = {
+        "queryset1": full_list,
+        "queryset2": category_list
+    }
+    return render(request, "events/event_list.html", context)
 
-def event_update(request,slug = None):
-	if not request.user.is_staff or not request.user.is_superuser:
-		raise Http404
-	instance = get_object_or_404(Event, slug =slug)
-	form =EventForm(request.POST or None,request.FILES or None,instance = instance )
-	if form.is_valid():
-		instance = form.save(commit = False)
-		instance.save()
-		# message success
-		
-		return HttpResponseRedirect('/') #redirects to detail page
 
-	context = {
-			"instance":instance,
-			"title": instance.event_name,   
-			 #inside context we declare variables which can be used in html files
-			"form":form,
-	}
+def event_update(request, slug=None):
+    if not request.user.is_staff or not request.user.is_superuser:
+        raise Http404
+    instance = get_object_or_404(Event, slug=slug)
+    form = EventForm(request.POST or None, request.FILES or None, instance=instance)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+        # message success
 
-	return render(request,"events/event_form.html",context)
+        return HttpResponseRedirect('/')  # redirects to detail page
 
-    
-   
+    context = {
+        "instance": instance,
+        "title": instance.event_name,
+        # inside context we declare variables which can be used in html files
+        "form": form,
+    }
+
+    return render(request, "events/event_form.html", context)
+
 
 def event_delete(request, slug=None):
 

@@ -91,9 +91,13 @@
 					<header class="top-header" id="top-header">
 						<div class="overlay white-solid">
 						</div>
-						<svg class="menu-trigger icon icon-menu visible-xs" id="menu-trigger" viewbox="0 0 32 32">
-						<use xlink:href={% static 'img/sprites/sprites.svg' %}>#icon-menu
-						</use></svg> <a class="logo-header" href="https://gdgjss.in" id="logo-header">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="menu-trigger icon icon-menu visible-xs" id="menu-trigger" viewbox="0 0 32 32">
+							<g xmlns="http://www.w3.org/2000/svg" id="icon-menu">
+								<path class="path1" d="M4 6.667h24q0.552 0 0.943 0.391t0.391 0.943-0.391 0.943-0.943 0.391h-24q-0.552 0-0.943-0.391t-0.391-0.943 0.391-0.943 0.943-0.391zM4 22.667h24q0.552 0 0.943 0.391t0.391 0.943-0.391 0.943-0.943 0.391h-24q-0.552 0-0.943-0.391t-0.391-0.943 0.391-0.943 0.943-0.391zM4 14.667h24q0.552 0 0.943 0.391t0.391 0.943-0.391 0.943-0.943 0.391h-24q-0.552 0-0.943-0.391t-0.391-0.943 0.391-0.943 0.943-0.391z"/>
+							</g>
+							<use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="{% static "img/sprites/sprites.svg#icon-menu" %}" xlink:href="#icon-menu" transform="translate(434 0)"/>
+						</svg> 
+						<a class="logo-header" href="https://gdgjss.in" id="logo-header">
 						<div class="logo logo-light">
 						</div></a>
 
@@ -104,21 +108,22 @@
 
 							<ul>
 								<li>
-									<a class="" href="/">Home</a>
+									<a class="current" href={% url 'index' %}>Home</a>
 								</li>
 
 
 								<li>
-									<a class="" href="/events">Events</a>
+									<a class="" href={% url 'events' %}>Events</a>
 								</li>
 
 
 								<li>
-									<a class="" href="/team">Team</a>
+									<a class="" href={% url 'team' %}>Team</a>
 								</li>
 
-
-
+								<li>
+									<a class="" href={% url 'projects' %}>Projects</a>
+								</li>
 							</ul>
 
 

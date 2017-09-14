@@ -14,14 +14,13 @@ class Team(models.Model):
     pic = models.ImageField(upload_to='media/team/',
                             null=True, blank=True, height_field="height_field",
                             width_field="width_field")
-    height_field = models.IntegerField(default=0,blank=True)
-    width_field = models.IntegerField(default=0,blank=True)
-    github_link = models.URLField(max_length=50,null=True,blank=True)
-    email = models.EmailField(max_length=250,null=True,blank=True)
+    height_field = models.IntegerField(default=0, blank=True)
+    width_field = models.IntegerField(default=0, blank=True)
+    github_link = models.URLField(max_length=50, null=True, blank=True)
+    email = models.EmailField(max_length=250, null=True, blank=True)
     linkedin = models.URLField(
-        max_length=250,null=True,blank=True)
-    description = models.CharField(max_length=250,null=True,blank=True)
-
+        max_length=250, null=True, blank=True)
+    description = models.CharField(max_length=250, null=True, blank=True)
 
     def __str__(self):
         return self.name

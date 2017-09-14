@@ -108,3 +108,6 @@ ENV/
 .DS_Store
 
 media/
+
+#files
+*.ini
