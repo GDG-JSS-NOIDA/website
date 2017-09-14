@@ -107,19 +107,22 @@
 
 							<ul>
 								<li>
-									<a class="" href="/">Home</a>
+									<a class="" href={% url 'index' %}>Home</a>
 								</li>
 
 
 								<li>
-									<a class="" href="/events.html">Events</a>
+									<a class="" href={% url 'events' %}>Events</a>
 								</li>
 
 
 								<li>
-									<a class="" href="/team.html">Team</a>
+									<a class="" href={% url 'team' %}>Team</a>
 								</li>
 
+								<li>
+									<a class="" href={% url 'projects' %}>Projects</a>
+								</li>
 							</ul>
 							
 						</nav>
