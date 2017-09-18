@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>login</title>
+	</head>
+	<body>
+		<form role="form" method="post" action="{% url 'check' %}">
+			{% csrf_token %}
+			<div class="form-group">
+				<label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+				<input type="text" class="form-control" name="username" id="username" value="" placeholder="username">
+			</div>
+			<div class="form-group">
+				<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+				<input type="password" class="form-control" name="password" id="password" value="" placeholder="password">
+			</div>
+			<div class="form-group">
+				<br>
+				<button type="submit" class="btn btn-primary btn-block">Login</button>
+			</div>
+		</form>
+	</body>
+</html>

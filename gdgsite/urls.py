@@ -23,8 +23,9 @@ from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^accounts/', include('accounts.urls')),
     url(r'^', include('client.urls')),
+    url(r'^dashboard/', include('mainapp.urls')),
+    # url(r'^accounts/', include('accounts.urls')),
     # url(r'^team/',include('team.urls',namespace='team')),
     # url(r'^projects/', include('projects.urls')),
     # url(r'^events/', include('events.urls')),
