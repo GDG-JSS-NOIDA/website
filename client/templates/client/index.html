@@ -126,31 +126,31 @@
 
 							<ul>
 								<li>
-									<a class="current" href={% url 'index' %}>Home</a>
+									<a class="current" href={% url 'client:index' %}>Home</a>
 								</li>
 
 
 								<li>
-									<a class="" href={% url 'events' %}>Events</a>
+									<a class="" href={% url 'client:events' %}>Events</a>
 								</li>
 
 
 								<li>
-									<a class="" href={% url 'team' %}>Team</a>
+									<a class="" href={% url 'client:team' %}>Team</a>
 								</li>
 
 								<li>
-									<a class="" href={% url 'projects' %}>Projects</a>
+									<a class="" href={% url 'client:projects' %}>Projects</a>
 								</li>
 							</ul>
 
 
 							<ul class="bottom-navlinks visible-xs" id="bottom-navlinks">
 								<li>
-									<a href={% url 'register' %}>Register</a>
+									<a href={% url 'client:register' %}>Register</a>
 								</li>
 							</ul>
-							<a class="right-nav-button right-nav-button-hidden btn btn-primary waves-effect waves-button waves-light waves-float pull-right hidden-xs hidden-sm" href={% url 'register' %}>Register</a>
+							<a class="right-nav-button right-nav-button-hidden btn btn-primary waves-effect waves-button waves-light waves-float pull-right hidden-xs hidden-sm" href={% url 'client:register' %}>Register</a>
 						</nav>
 					</header>
 
@@ -162,7 +162,7 @@
 
 
 								<p></p>
-								<a class="btn btn-primary waves-effect waves-button waves-light waves-float" href={% url 'register' %}>Register</a>
+								<a class="btn btn-primary waves-effect waves-button waves-light waves-float" href={% url 'client:register' %}>Register</a>
 							</div>
 						</div>
 						<a class="explore" href="#about"><svg class="icon icon-arrow-down" viewbox="0 0 32 32">
