@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from projects.models import *
-from team.models import *
-from events.models import *
-
+# from projects.models import *
+# from team.models import *
+# from events.models import *
+from mainapp.models import *
 # Create your views here.
 
 
