@@ -10,12 +10,13 @@ def upload_location(instance, filename):
 class Team(models.Model):
     user_id = models.ManyToManyField(settings.AUTH_USER_MODEL)
     name = models.CharField(max_length=30)
-    status = models.CharField(max_length=50)
-    pic = models.ImageField(upload_to='media/team/',
+    status = models.BooleanField(default=True)
+    pic = models.ImageField(upload_to='team/',
                             null=True, blank=True, height_field="height_field",
                             width_field="width_field")
     height_field = models.IntegerField(default=0, blank=True)
     width_field = models.IntegerField(default=0, blank=True)
+    year = models.IntegerField(default=0, blank=True)
     github_link = models.URLField(max_length=50, null=True, blank=True)
     email = models.EmailField(max_length=250, null=True, blank=True)
     linkedin = models.URLField(

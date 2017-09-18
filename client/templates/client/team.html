@@ -92,7 +92,7 @@
 								<path class="path1" d="M4 6.667h24q0.552 0 0.943 0.391t0.391 0.943-0.391 0.943-0.943 0.391h-24q-0.552 0-0.943-0.391t-0.391-0.943 0.391-0.943 0.943-0.391zM4 22.667h24q0.552 0 0.943 0.391t0.391 0.943-0.391 0.943-0.943 0.391h-24q-0.552 0-0.943-0.391t-0.391-0.943 0.391-0.943 0.943-0.391zM4 14.667h24q0.552 0 0.943 0.391t0.391 0.943-0.391 0.943-0.943 0.391h-24q-0.552 0-0.943-0.391t-0.391-0.943 0.391-0.943 0.943-0.391z"/>
 							</g>
 							<use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="{% static "img/sprites/sprites.svg#icon-menu" %}" xlink:href="#icon-menu" transform="translate(434 0)"/>
-						</svg> 
+						</svg>
 						<a class="logo-header" href="https://gdgjss.in" id="logo-header">
 						<div class="logo logo-light">
 						</div></a>
@@ -102,7 +102,7 @@
 							</div>
 
 
-							
+
 							<ul>
 								<li>
 									<a class="" href={% url 'index' %}>Home</a>
@@ -156,11 +156,11 @@
 						<div class="col-lg-10 col-lg-offset-1 text-center">
 							<h4 class="text-left animated hiding appear-animation-trigger" data-animation="fadeInUp" data-delay="0">Current Members</h4>
 
-							{% for member in team1 %}
+							{% for member in teams1 %}
 
 							<div class="effect-wrapper col-md-4 col-sm-6 col-xs-12 cols-centered appear-animation" style="transition-delay: 0.03901s; transition-duration: 0.2s;">
 								<div class="zoe-effect" data-target="#speakerDetail-0" data-toggle="modal">
-									<a href="{{team.github_link}}" target="_blank"><figure class="waves-effect waves-block waves-light" style="background-image:url(/media/{{team.pic}})" /><!--Use /url instead /media/url-->
+									<a href="{{team.github_link}}" target="_blank"><figure class="waves-effect waves-block waves-light" style="background-image:url(/media/{{member.pic}})" /><!--Use /url instead /media/url-->
 										<div class="overlay solid-overlay"></div>
 
 											<figcaption>
@@ -168,7 +168,7 @@
 													<h2 class="name">{{member.name}}</h2>
 													<div class="clearfix">
 													</div>
-													<span class="position">{{member.year}}</span>
+													{# <span class="position">{{member.year}}</span>#}
 												</div>
 											   <!--<svg class="icon icon-github" viewbox="0 0 50 52">
 												<use xlink:href="{% static 'img/sprites/sprites.svg' %}#icon-github">-->
@@ -187,11 +187,11 @@
 						<div class="col-lg-10 col-lg-offset-1 text-center">
 							<h4 class="text-left animated hiding appear-animation-trigger" data-animation="fadeInUp" data-delay="0">Alumni Members</h4>
 
-							{% for member in team2 %}
+							{% for member in teams2 %}
 
 							<div class="effect-wrapper col-md-4 col-sm-6 col-xs-12 cols-centered appear-animation" style="transition-delay: 0.03901s; transition-duration: 0.2s;">
 								<div class="zoe-effect" data-target="#speakerDetail-0" data-toggle="modal">
-									<a href="{{team.github_link}}" target="_blank"><figure class="waves-effect waves-block waves-light" style="background-image:url(/media/{{team.pic}})" /><!--Use /url instead /media/url-->
+									<a href="{{team.github_link}}" target="_blank"><figure class="waves-effect waves-block waves-light" style="background-image:url(/{{team.pic}})" /><!--Use /url instead /media/url-->
 										<div class="overlay solid-overlay"></div>
 
 											<figcaption>

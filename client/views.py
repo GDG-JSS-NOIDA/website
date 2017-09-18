@@ -4,14 +4,17 @@ from team.models import *
 from events.models import *
 
 # Create your views here.
+
+
 def index(request):
     return render(request, 'client/index.html')
 
+
 def events(request):
-	event  = Event.objects.all()
-	now =datetime.datetime.now()
-	ongoing = Event.objects.all().filter(start_date__lte= now , end_date__gte=now)
-	upcoming= Event.objects.all().filter(start_date__gte=now)
+	event = Event.objects.all()
+	now = datetime.datetime.now()
+	ongoing = Event.objects.all().filter(start_date__lte=now, end_date__gte=now)
+	upcoming = Event.objects.all().filter(start_date__gte=now)
 	past = Event.objects.all().filter(end_date__lte=now)
 	full_list = []
 	for items in ongoing:
@@ -23,15 +26,17 @@ def events(request):
 	for items in past:
 		items.category = "past"
 		full_list.append(items)
-	print (full_list)
+	print(full_list)
 	context = {
 	"queryset1": full_list,
 	}
-	return render(request, 'client/events.html',context)
+	return render(request, 'client/events.html', context)
+
 
 def team(request):
-	team = Team.objects.all()
-	return render(request, 'client/team.html', {'teams': team})
+    team1 = Team.objects.filter(status = True).order_by('-year')
+    team2 = Team.objects.filter(status = False).order_by('-year')
+    return render(request, 'client/team.html', {'teams1': team1, 'teams2': team2})
 
 def register(request):
     return render(request, 'client/register.html')
