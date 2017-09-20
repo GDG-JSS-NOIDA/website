@@ -4,7 +4,7 @@
 		<title>login</title>
 	</head>
 	<body>
-		<form role="form" method="post" action="{% url 'check' %}">
+		<form role="form" method="post" action="{% url 'mainapp:check' %}">
 			{% csrf_token %}
 			<div class="form-group">
 				<label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
