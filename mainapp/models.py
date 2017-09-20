@@ -16,7 +16,7 @@ from django.utils.text import slugify
 
 # team models
 class Team(models.Model):
-    user_id = models.ManyToManyField(settings.AUTH_USER_MODEL)
+    # user_id = models.ManyToManyField(settings.AUTH_USER_MODEL)
     name = models.CharField(max_length=30)
     status = models.BooleanField(default=True)
     pic = models.ImageField(upload_to='team/',
