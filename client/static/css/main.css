@@ -5207,3 +5207,7 @@ nav li a.current, nav li a:hover {
 .imgWrap:hover .img-desc {
   transform: translateY(0);
 }
+
+.modal-backdrop {
+	z-index: 0;
+}

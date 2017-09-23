@@ -83,7 +83,7 @@
 								<g xmlns="http://www.w3.org/2000/svg" id="icon-menu">
 									<path class="path1" d="M4 6.667h24q0.552 0 0.943 0.391t0.391 0.943-0.391 0.943-0.943 0.391h-24q-0.552 0-0.943-0.391t-0.391-0.943 0.391-0.943 0.943-0.391zM4 22.667h24q0.552 0 0.943 0.391t0.391 0.943-0.391 0.943-0.943 0.391h-24q-0.552 0-0.943-0.391t-0.391-0.943 0.391-0.943 0.943-0.391zM4 14.667h24q0.552 0 0.943 0.391t0.391 0.943-0.391 0.943-0.943 0.391h-24q-0.552 0-0.943-0.391t-0.391-0.943 0.391-0.943 0.943-0.391z"/>
 								</g>
-								<use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="{% static "img/sprites/sprites.svg#icon-menu" %}" xlink:href="#icon-menu" transform="translate(434 0)"/>
+								<use xmlns="http://www.w3.org/2000/svg" xmlns:xlink= {% static 'img/sprites/sprites.svg' %}#icon-menu xlink:href="#icon-menu" transform="translate(434 0)"/>
 							</svg>
 							<a class="logo-header" href="https://gdgjss.in" id="logo-header">
 								<div class="logo logo-light">
@@ -107,10 +107,10 @@
 									</ul>
 									<ul class="bottom-navlinks visible-xs" id="bottom-navlinks">
 										<li>
-											<a href="/register.html">Register</a>
+											<a href={% url 'client:register' %}>Register</a>
 										</li>
 									</ul>
-									<a class="right-nav-button right-nav-button-hidden btn btn-primary waves-effect waves-button waves-light waves-float pull-right hidden-xs hidden-sm" href="/register.html">Register</a>
+									<a class="right-nav-button right-nav-button-hidden btn btn-primary waves-effect waves-button waves-light waves-float pull-right hidden-xs hidden-sm" href={% url 'client:register' %}>Register</a>
 								</nav>
 							</header>
 							<div class="content-wrapper">
@@ -200,17 +200,17 @@
 											<ul class="social-links">
 												<li>
 													<a href="https://plus.google.com/+GDGJSSNoida" target="_blank"><svg class="icon icon-google-plus" viewbox="0 0 30 32">
-														<use xlink:href="/img/sprites/sprites.svg#icon-google-plus">
+														<use xlink:href={% static 'img/sprites/sprites.svg' %}#icon-google-plus>
 													</use></svg></a>
 												</li>
 												<li>
 													<a href="https://www.facebook.com/gdgjss/" target="_blank"><svg class="icon icon-facebook" viewbox="0 0 30 32">
-														<use xlink:href="/img/sprites/sprites.svg#icon-facebook">
+														<use xlink:href={% static 'img/sprites/sprites.svg' %}#icon-facebook>
 													</use></svg></a>
 												</li>
 												<li>
 													<a href="https://github.com/GDG-JSS-NOIDA/" target="_blank"><svg class="icon icon-github" viewbox="0 0 30 32">
-														<use xlink:href="/img/sprites/sprites.svg#icon-github">
+														<use xlink:href={% static 'img/sprites/sprites.svg' %}#icon-github>
 													</use></svg></a>
 												</li>
 											</ul>
