@@ -128,7 +128,7 @@
 									{% for member in teams1 %}
 										<div class="effect-wrapper col-md-4 col-sm-6 col-xs-12 cols-centered appear-animation" style="transition-delay: 0.03901s; transition-duration: 0.2s;">
 											<div class="zoe-effect" data-target="#speakerDetail-0" data-toggle="modal">
-												<a href="{{team.github_link}}" target="_blank"><figure class="waves-effect waves-block waves-light" style="background-image:url(/media/{{member.pic}})" /><!--Use /url instead /media/url-->
+												<a href="{{member.github_link}}" target="_blank"><figure class="waves-effect waves-block waves-light" style="background-image:url(/media/{{member.pic}})" /><!--Use /url instead /media/url-->
 												<div class="overlay solid-overlay"></div>
 												<figcaption>
 												<div class="col-md-8 col-xs-8 text-left">
@@ -151,7 +151,7 @@
 								{% for member in teams2 %}
 									<div class="effect-wrapper col-md-4 col-sm-6 col-xs-12 cols-centered appear-animation" style="transition-delay: 0.03901s; transition-duration: 0.2s;">
 										<div class="zoe-effect" data-target="#speakerDetail-0" data-toggle="modal">
-											<a href="{{team.github_link}}" target="_blank"><figure class="waves-effect waves-block waves-light" style="background-image:url(/{{team.pic}})" /><!--Use /url instead /media/url-->
+											<a href="{{member.github_link}}" target="_blank"><figure class="waves-effect waves-block waves-light" style="background-image:url(/{{member.pic}})" /><!--Use /url instead /media/url-->
 											<div class="overlay solid-overlay"></div>
 											<figcaption>
 											<div class="col-md-8 col-xs-8 text-left">

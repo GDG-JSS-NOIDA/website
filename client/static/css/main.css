@@ -1429,6 +1429,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 	filter: alpha(opacity=50)
 }
 button.close {
+	margin: -20px;
 	padding: 0;
 	cursor: pointer;
 	background: transparent;
@@ -1473,13 +1474,13 @@ button.close {
 }
 .modal-content {
 	position: relative;
-	background-color: #fff;
-	border: 1px solid #999;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	border-radius: 6px;
+	padding: 20px;
+	background-color: #f3fff3;
+	border: 25px solid #fff;
 	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
 	background-clip: padding-box;
-	outline: 0
+	outline: 0;
+	text-align: left;
 }
 .modal-backdrop {
 	position: absolute;
@@ -3657,7 +3658,6 @@ nav li a.current, nav li a:hover {
 	z-index: 1040
 }
 .modal-content {
-	border-radius: 4px;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3)
 }
 .modal-body {

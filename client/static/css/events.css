@@ -20,7 +20,7 @@
 .modal-content {
   height: auto;
   min-height: 100%;
-  border-radius: 0;
+  border-radius: 0px !important;
 }
 
 #recent-works {
@@ -49,8 +49,8 @@
 }
 
 .recent-work-wrap .recent-work-inner h3 a {
-  font-size: 24px;
-  color: #fff;
+  font-size: 0.4em;
+  color: black;
 }
 
 .recent-work-wrap .overlay {
@@ -61,7 +61,7 @@
   height: 100%;
   opacity: 0;
   border-radius: 0;
-  background: #c52d2f;
+  background: #99e2be;
   color: #fff;
   vertical-align: middle;
   -webkit-transition: opacity 500ms;
@@ -84,6 +84,8 @@
 
 .recent-work-wrap:hover .overlay {
   opacity: 1;
+  color: black;
+  background: #99e2be;
 }
 
 #portfolio_page {
@@ -118,8 +120,8 @@
 
 .portfolio-filter > li a:hover, .portfolio-filter > li a.active {
   color: #fff;
-  background: #c52d2f;
-  border: 1px solid #c52d2f;
+  background: #0f9d58;
+  border: 1px solid #0f9d58;
   box-shadow: none;
   -webkit-box-shadow: none;
 }
@@ -192,4 +194,13 @@
   -ms-transition: none;
   -o-transition: none;
   transition: none;
+}
+
+
+
+.modal_header {
+  margin: 20px;
+}
+.modal_time {
+  font-size: 50%;
 }
