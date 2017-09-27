@@ -1,8 +1,9 @@
 from django.db import models
-
+from mainapp.models import Event
 # Create your models here.
 
 class Register(models.Model):
+    eventid = models.ForeignKey(Event)
     name = models.CharField(max_length=50)
     adm_no = models.CharField(max_length=10)
     email = models.EmailField(max_length=50)
