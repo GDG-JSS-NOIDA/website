@@ -121,45 +121,68 @@
 								</div>
 							</div>
 						</section>
-						<!-- End Top Section --><!-- Begin Event Section List-->
-						<section id="portfolio">
+						<!-- End Top Section -->
 							<div class="container">
 								<div class="center">
 									<p class="lead">We at GDG work with collaboration and commitment and try to contribute whenever and whatever we could. <br> Anyone can see and contribute to our projects, as we believe so much in open source all our projects are open source.</p>
 								</div>
-								<!-- <ul class="portfolio-filter text-center">
-									<li><a class="btn btn-default active" href="#" data-filter="*">All Works</a></li>
-									<li><a class="btn btn-default" href="#" data-filter=".bootstrap">Active</a></li>
-									<li><a class="btn btn-default" href="#" data-filter=".html">Past</a></li>
-									</ul> --><!--/#portfolio-filter-->
-									<div class="row">
-										{% for project in projects %}
-											<h3>{{project.name |upper}}</h3>
-											<p>{{project.description}}<br>
-												{{project.github_repo}}<br>
-											{{project.live_link}}</p>
-											{% for contributor in project.contributors_set.all %}
-												<h5>{{contributor.name}}</h5>
-											{% endfor %}
-											<div class="row">
-												<center>
-												{% for image in project.projectimage_set.all %}
-													<div class="col-md-4">
-													<p>djsdb</p>
-														{% if image %}
-															<img src="/media/{{image.picture}}" width="200px" height="200px" style="padding-bottom: 10px;"><br>
-															<p>{{image | upper}}</p>
-														{% endif %}
-													</div>
-												{% endfor %}
-												</center>
-											</div>
-											<br><hr>
-										{% endfor %}
+							</div>
+				
+
+
+			<section class="team" id="team">
+				<div class="container">
+				<div class="content-wrapper">
+
+					{% for project in projects %}
+
+					<div class="effect-wrapper appear-animation col-lg-12 col-md-12 col-sm-12 col-xs-12 visible">
+
+						<div class="lily-effect ribbon-activator">
+
+							<div class="lily-head">
+								<figure class="waves-effect waves-block waves-light"><h2>{{project.name |upper}}</h2>
+									<div class="overlay">								
 									</div>
+								</figure>
+							</div>
+
+
+							<div class="lily-bottom">
+								<div class="project-details">
+
+									<div class="project-title">Description:</div>
+									{{project.description}}<br><br>
+
+									<div class="project-title" >Links:</div>
+									<a href="{{project.github_repo}}">Github</a>						
+									<a href="{{project.live_link}}">Live</a><br><br>
+
+									<div class="project-title">Contributors:</div>
+									{% for contributor in project.contributors_set.all %}
+										<li>{{contributor.name}}</li>
+									{% endfor %}<br>
+
+									<div class="project-title">Images:</div><br>
+
+									{% for image in project.projectimage_set.all %}
+										{% if image %}
+										<img src="/media/{{image.picture}}" height="220px" width="220px">
+										{% endif %}
+									{% endfor %}
 								</div>
-							</section>
-							<!-- End Event Section --><!-- Begin Footer -->
+							</div>
+						</div>
+					</div>
+
+				{% endfor %}
+
+				</div>
+				</div>
+			</section>
+
+
+							<!-- End Project Section --><!-- Begin Footer -->
 							<footer class="footer" id="footer">
 								<div class="row">
 									<div class="logo logo-footer logo-gray pull-right">

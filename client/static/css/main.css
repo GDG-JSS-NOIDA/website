@@ -1863,7 +1863,7 @@ body, html {
 section {
 	position: relative;
 	overflow: hidden;
-	min-height: 350px;
+	min-height: 650px;
 	padding-top: 50px;
 	padding-bottom: 60px;
 	text-align: center
@@ -3531,11 +3531,10 @@ nav li a.current, nav li a:hover {
 	background: transparent
 }
 .lily-effect .lily-head {
-	height: 200px
+	height: 115px
 }
 .lily-effect .lily-bottom {
 	clear: both;
-	height: 80px;
 	padding: 16px 14px 9px;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
@@ -3563,6 +3562,16 @@ nav li a.current, nav li a:hover {
 	right: 25px;
 	bottom: 30px
 }
+
+.project-details {
+	text-align: left;
+}
+
+.project-title {
+	font-size: 20px;
+}
+
+
 .ribbon-wrapper {
 	position: absolute;
 	z-index: 5;
