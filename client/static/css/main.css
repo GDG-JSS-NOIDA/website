@@ -1429,6 +1429,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 	filter: alpha(opacity=50)
 }
 button.close {
+	margin: -20px;
 	padding: 0;
 	cursor: pointer;
 	background: transparent;
@@ -1473,13 +1474,13 @@ button.close {
 }
 .modal-content {
 	position: relative;
-	background-color: #fff;
-	border: 1px solid #999;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	border-radius: 6px;
+	padding: 20px;
+	background-color: #f3fff3;
+	border: 25px solid #fff;
 	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
 	background-clip: padding-box;
-	outline: 0
+	outline: 0;
+	text-align: left;
 }
 .modal-backdrop {
 	position: absolute;
@@ -1862,7 +1863,7 @@ body, html {
 section {
 	position: relative;
 	overflow: hidden;
-	min-height: 350px;
+	min-height: 650px;
 	padding-top: 50px;
 	padding-bottom: 60px;
 	text-align: center
@@ -3530,11 +3531,10 @@ nav li a.current, nav li a:hover {
 	background: transparent
 }
 .lily-effect .lily-head {
-	height: 200px
+	height: 115px
 }
 .lily-effect .lily-bottom {
 	clear: both;
-	height: 80px;
 	padding: 16px 14px 9px;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
@@ -3562,6 +3562,16 @@ nav li a.current, nav li a:hover {
 	right: 25px;
 	bottom: 30px
 }
+
+.project-details {
+	text-align: left;
+}
+
+.project-title {
+	font-size: 20px;
+}
+
+
 .ribbon-wrapper {
 	position: absolute;
 	z-index: 5;
@@ -3657,7 +3667,6 @@ nav li a.current, nav li a:hover {
 	z-index: 1040
 }
 .modal-content {
-	border-radius: 4px;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3)
 }
 .modal-body {
@@ -5206,4 +5215,8 @@ nav li a.current, nav li a:hover {
 
 .imgWrap:hover .img-desc {
   transform: translateY(0);
+}
+
+.modal-backdrop {
+	z-index: 0;
 }
