@@ -20,6 +20,10 @@ from django.views.generic import TemplateView
 # from team import views
 from django.conf.urls.static import static
 from django.conf import settings
+from django.conf.urls import (handler404,handler500)
+
+handler404 = 'mainapp.views.handler404'
+handler500 = 'mainapp.views.handler500'
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
