@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html><head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Page not found · GDG ~ Error 500</title>
+   <link href={% static 'img/favicons/favicon.ico' %} rel="shortcut icon">
+    <style type="text/css" media="screen">
+      body {
+        background-color: #f1f1f1;
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+
+      .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
+
+      a { color: #4183c4; text-decoration: none;}
+      a:hover { text-decoration: underline; }
+
+      h1 { width: 800px; position:relative; left: -100px; letter-spacing: -1px; line-height: 60px; font-size: 3.5em; font-weight: 100; margin: 0px 0 50px 0; text-shadow: 0 1px 0 #fff; }
+      p { color: rgba(0, 0, 0, 0.5); margin: 20px 0; line-height: 1.6; font-size: 1.8em; }
+
+      ul { list-style: none; margin: 25px 0; padding: 0; }
+      li { display: table-cell; font-weight: bold; width: 1%; }
+
+      .logo { display: inline-block; margin-top: 35px; }
+
+      @media
+      only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (   min--moz-device-pixel-ratio: 2),
+      only screen and (     -o-min-device-pixel-ratio: 2/1),
+      only screen and (        min-device-pixel-ratio: 2),
+      only screen and (                min-resolution: 192dpi),
+      only screen and (                min-resolution: 2dppx) {
+        .container { margin: 200px auto 50px auto; }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <h1>404</h1>
+      <p><strong>Page not found</strong></p>
+
+
+
+      <p>
+        Click <a href="{% url 'client:index' %}">here</a> to go to the <strong>home page</strong>.
+      </p>
+
+
+      <a href="{% url 'client:index' %}" class="logo">
+        <img title="" alt="gdg-logo" src="https://developers.google.com/_static/bd453c82db/images/gdg-program-icon.png" width="64px" height="64px">
+      </a>
+    </div>
+
+
+</body></html>
