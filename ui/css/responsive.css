@@ -226,7 +226,9 @@
     display: none;
   }
 
-
+  .logo-footer {
+    display: none;
+  }
 }
 
 /* XS Portrait */
@@ -317,6 +319,8 @@
     display: none;
   }
 
-
+  .logo-footer {
+    display: none;
+  }
 }
 
