@@ -145,8 +145,12 @@
 														<div class="project-title">Description:</div>
 														{{project.description}}<br><br>
 														<div class="project-title" >Links:</div>
+														{% if project.github_repo %}
 														<a href="{{project.github_repo}}">Github</a>
+														{% endif %}	
+														{% if project.live_link %}					
 														<a href="{{project.live_link}}">Live</a><br><br>
+														{% endif %}
 														<div class="project-title">Contributors:</div>
 														{% for contributor in project.contributors_set.all %}
 															<li>{{contributor.name}}</li>
