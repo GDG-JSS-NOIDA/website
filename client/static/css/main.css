@@ -2588,10 +2588,34 @@ nav li a.current, nav li a:hover {
 .typeout-fallback {
 	display: none
 }
-.explore {
+.explore-about {
 	margin-left: -16px;
 	position: absolute;
 	bottom: -25px;
+	left: 50%;
+	-webkit-animation: callToAction 3.5s linear 0s infinite;
+	animation: callToAction 3.5s linear 0s infinite
+}
+.explore-statistic {
+	margin-left: -16px;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	-webkit-animation: callToAction 3.5s linear 0s infinite;
+	animation: callToAction 3.5s linear 0s infinite
+}
+.explore-latest-news {
+	margin-left: -16px;
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	-webkit-animation: callToAction 3.5s linear 0s infinite;
+	animation: callToAction 3.5s linear 0s infinite
+}
+.explore-location-map {
+	margin-left: -16px;
+	position: absolute;
+	bottom: -5px;
 	left: 50%;
 	-webkit-animation: callToAction 3.5s linear 0s infinite;
 	animation: callToAction 3.5s linear 0s infinite
@@ -4778,12 +4802,6 @@ nav li a.current, nav li a:hover {
 	}
 	.typeout-fallback {
 		display: inline-block
-	}
-	.explore {
-		margin-left: -12.5px;
-		bottom: 30px;
-		-webkit-animation: none;
-		animation: none
 	}
 	.icon-arrow-down {
 		width: 24px;
