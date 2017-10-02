@@ -126,55 +126,72 @@
 								<div class="col-lg-10 col-lg-offset-1 text-center">
 									<h4 class="text-left animated hiding appear-animation-trigger" data-animation="fadeInUp" data-delay="0">Current Members</h4>
 									{% for member in teams1 %}
+
 										<div class="effect-wrapper col-md-4 col-sm-6 col-xs-12 cols-centered appear-animation" style="transition-delay: 0.03901s; transition-duration: 0.2s;">
 											<div class="zoe-effect" data-target="#speakerDetail-0" data-toggle="modal">
-												{% if member.github_link %}
-													<a href="{{member.github_link}}" target="_blank">
-												{% else %}
-													<a href="#" target="_blank">
-												{% endif %}
-													<figure class="waves-effect waves-block waves-light" style="background-image:url(/media/{{member.pic}})" /><!--Use /url instead /media/url-->
-													<div class="overlay solid-overlay"></div>
-													<figcaption>
-													<div class="col-md-8 col-xs-8 text-left">
-														<h2 class="name">{{member.name}}</h2>
-														<div class="clearfix">
-														</div>
-														{# <span class="position">{{member.year}}</span>#}
+
+												<figure class="waves-effect waves-block waves-light" style="background-image:url(/media/{{member.pic}})"><!--Use /url instead /media/url-->
+												<div class="overlay solid-overlay"></div>
+												<figcaption>
+												<div class="col-md-8 col-xs-8 text-left">
+													<h2 class="name">{{member.name}}</h2>
+													<div class="clearfix"></div>
+
+												{% if member.description %}								
+													<span class="position">{{member.description}}</span>
+												{% endif %}														 
 													</div>
-													<!--<svg class="icon icon-github" viewbox="0 0 50 52">
-														<use xlink:href="{% static 'img/sprites/sprites.svg' %}#icon-github">-->
-														</figcaption>
-													</figure>
-												</a>
+
+												{% if member.github_link %}
+													<a href="{{member.github_link}}" target="_blank"><svg class="icon icon-github" viewbox="0 0 30 32"><use xlink:href={% static 'img/sprites/sprites.svg' %}#icon-github></use></svg></a> 				
+												{% endif %}
+
+												{% if member.github_link %}
+													<a href="{{member.email}}" target="_blank"><svg class="icon icon-email" viewbox="0 0 30 32"><use xlink:href={% static 'img/sprites/sprites.svg' %}#icon-email></use></svg></a> 										
+												{% endif %}
+
+												{% if member.github_link %}
+													<a href="{{member.linkedin}}" target="_blank"><svg class="icon icon-linkedin" viewbox="0 0 30 32"><use xlink:href={% static 'img/sprites/sprites.svg' %}#icon-linkedin>	</use></svg></a> 										
+												{% endif %}													
+												</figcaption>
+												</figure>
 											</div>
 										</div>
+
 									{% endfor %}
 								</div>
 								<div class="col-lg-10 col-lg-offset-1 text-center">
 									<h4 class="text-left animated hiding appear-animation-trigger" data-animation="fadeInUp" data-delay="0">Alumni Members</h4>
 									{% for member in teams2 %}
+									
 										<div class="effect-wrapper col-md-4 col-sm-6 col-xs-12 cols-centered appear-animation" style="transition-delay: 0.03901s; transition-duration: 0.2s;">
 											<div class="zoe-effect" data-target="#speakerDetail-0" data-toggle="modal">
-												{% if member.github_link %}
-													<a href="{{member.github_link}}" target="_blank">
-													{% else %}
-													<a href="{{member.github_link}}" target="_blank">
-													{% endif %}
-													<figure class="waves-effect waves-block waves-light" style="background-image:url(/media/{{member.pic}})" /><!--Use /url instead /media/url-->
-													<div class="overlay solid-overlay"></div>
-													<figcaption>
-													<div class="col-md-8 col-xs-8 text-left">
-														<h2 class="name">{{member.name}}</h2>
-														<div class="clearfix">
-														</div>
-														<span class="position">{{member.year}}</span>
+
+												<figure class="waves-effect waves-block waves-light" style="background-image:url(/media/{{member.pic}})"><!--Use /url instead /media/url-->
+												<div class="overlay solid-overlay"></div>
+												<figcaption>
+												<div class="col-md-8 col-xs-8 text-left">
+													<h2 class="name">{{member.name}}</h2>
+													<div class="clearfix"></div>
+
+												{% if member.description %}								
+													<span class="position">{{member.description}}</span>
+												{% endif %}														 
 													</div>
-													<!--<svg class="icon icon-github" viewbox="0 0 50 52">
-														<use xlink:href="{% static 'img/sprites/sprites.svg' %}#icon-github">-->
-														</figcaption>
-													</figure>
-												</a>
+
+												{% if member.github_link %}
+													<a href="{{member.github_link}}" target="_blank"><svg class="icon icon-github" viewbox="0 0 30 32"><use xlink:href={% static 'img/sprites/sprites.svg' %}#icon-github></use></svg></a> 				
+												{% endif %}
+
+												{% if member.github_link %}
+													<a href="{{member.email}}" target="_blank"><svg class="icon icon-email" viewbox="0 0 30 32"><use xlink:href={% static 'img/sprites/sprites.svg' %}#icon-email></use></svg></a> 										
+												{% endif %}
+
+												{% if member.github_link %}
+													<a href="{{member.linkedin}}" target="_blank"><svg class="icon icon-linkedin" viewbox="0 0 30 32"><use xlink:href={% static 'img/sprites/sprites.svg' %}#icon-linkedin>	</use></svg></a> 										
+												{% endif %}													
+												</figcaption>
+												</figure>
 											</div>
 										</div>
 									{% endfor %}
