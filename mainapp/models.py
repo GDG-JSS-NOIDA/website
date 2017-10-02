@@ -51,7 +51,10 @@ class Project(models.Model):
 class ProjectImage(models.Model):
     name = models.CharField(max_length=100)
     project = models.ForeignKey(Project)
-    picture = models.ImageField(upload_to='projects/', blank=True, null=True)
+    picture = models.ImageField(upload_to='projects/', blank=True, null=True,height_field="height_field",
+                                                width_field="width_field")
+    height_field = models.IntegerField(default=290, blank=True)
+    width_field = models.IntegerField(default=210, blank=True)
     main_image = models.BooleanField(default=False)
 
     def __str__(self):
@@ -85,8 +88,8 @@ class Event(models.Model):
                             null=True, blank=True,
                             height_field="height_field",
                             width_field="width_field")
-    height_field = models.IntegerField(default=0)
-    width_field = models.IntegerField(default=0)
+    height_field = models.IntegerField(default=290)
+    width_field = models.IntegerField(default=210)
 
     def __str__(self):
         return self.event_name
