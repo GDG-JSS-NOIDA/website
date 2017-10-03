@@ -6,5 +6,5 @@ app_name = 'register'
 
 
 urlpatterns = [
-    url(r'^$',views.Registration,name='register'),
+    url(r'^(\d+)$',views.register,name='register'),
 ]

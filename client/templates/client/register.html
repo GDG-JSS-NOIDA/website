@@ -138,15 +138,16 @@
 				<!-- Begin Form Section-->
 				<section id="form" style="margin: 0 auto;">
 					<div>
-						<form>
-							<h1>Event Name</h1>
-							<input placeholder="Name" type="text" value="" required>
-							<input placeholder="Admission Number" type="text" value="" required>
-							<input placeholder="Branch" type="text" value="" required>
-							<input placeholder="Year" type="text" value="" required>
-							<input placeholder="Email address" type="email" value="" required>
-							<input placeholder="Phone Number" type="text" value="" required>
-							<button>Send</button>
+						<form action="" method="POST">
+							{% csrf_token %}
+							<h1>Event Registration</h1>
+							<input placeholder="Name" type="text" value="" required>{{form.name}}</input>
+							<input placeholder="Admission Number" type="text" value="" required>{{form.adm_no}}</input>
+							<input placeholder="Branch" type="text" value="" required>{{form.branch}}</input>
+							<input placeholder="Year" type="text" value="" required>{{form.year}}</input>
+							<input placeholder="Email address" type="email" value="" required>{{form.email}}</input>
+							<input placeholder="Phone Number" type="text" value="" required>{{form.contact_no}}</input>
+							<button type="submit">Send</button>
 						</form>
 					</div>
 				</section>

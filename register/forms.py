@@ -6,4 +6,4 @@ class RegisterForm(ModelForm):
 
     class Meta:
         model = Register
-        fields = ('name', 'adm_no', 'email', 'contact_no')
+        fields = '__all__'

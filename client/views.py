@@ -41,8 +41,8 @@ def team(request):
     return render(request, 'client/team.html', {'teams1': team1, 'teams2': team2})
 
 
-def register(request):
-    return render(request, 'client/register.html')
+# def register(request):
+#     return render(request, 'client/register.html')
 
 
 def projects(request):
