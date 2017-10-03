@@ -33,5 +33,5 @@ urlpatterns = [
     # url(r'^team/',include('team.urls',namespace='team')),
     # url(r'^projects/', include('projects.urls')),
     # url(r'^events/', include('events.urls')),
-    url(r'^register/',include('register.urls')),
+    url(r'^register/',include('register.urls', namespace = 'register')),
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
