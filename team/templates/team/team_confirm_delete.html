@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Delete</title>
-  </head>
-  <body>
-    <h3>Are you sure you want to delete this post?</h3>
+
+<head>
+  <meta charset="utf-8">
+  <title>Delete</title>
+</head>
+
+<body>
+  <h3>Are you sure you want to delete this post?</h3>
 
 
-    <form method="POST">
-    	{% csrf_token %}
-    	<input type="submit" value="Confirm Delete" class="btn btn-danger btn-large">
-    	<a href="/team/main.html">Cancel</a>
-    </form>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Confirm Delete" class="btn btn-danger btn-large">
+    <a href="/team/main.html">Cancel</a>
+  </form>
 
-  </body>
+</body>
+
 </html>
