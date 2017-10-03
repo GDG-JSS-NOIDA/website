@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>This is the list of our team members!</h1>
-    {% block content %}
 
-       <h3>To create member click <a href="{% url 'team:create' %}">here</a></h3>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
 
-      {% for member in member_details %}
-        <p>{{member.name}} and is {{member.status}} of GDG</p>
-        <p><button type="button" name="button"><a href="/team/edit/{{member.user_id.pk}}">Edit</a></button></p>
-        <p><button type="button" name="button"><a href="/team/delete/{{member.user_id.pk}}">Delete</a></button></p>
+<body>
+  <h1>This is the list of our team members!</h1>
+  {% block content %}
+
+  <h3>To create member click <a href="{% url 'team:create' %}">here</a></h3>
+
+  {% for member in member_details %}
+  <p>{{member.name}} and is {{member.status}} of GDG</p>
+  <p><button type="button" name="button"><a href="/team/edit/{{member.user_id.pk}}">Edit</a></button></p>
+  <p><button type="button" name="button"><a href="/team/delete/{{member.user_id.pk}}">Delete</a></button></p>
 
 
-      {% endfor %}
+  {% endfor %} {% endblock %}
+</body>
 
-    {% endblock %}
-  </body>
 </html>

@@ -1,21 +1,22 @@
 {% block content %}
 
-        <center><h1>Events</h1></center>
-        {% for obj in queryset1 %}
-        {% if obj.image %}
-        <img src ='{{ obj.image.url }}' class='img-responsive' />
-        {% endif %}
-        <div class="caption">
-            <h3><p>{{ obj.event_name }}</a><small> &nbsp; {{ obj.timestamp | timesince  }} ago</p></small></h3>
-            <p><b>Created By</b> : {{ obj.created_by}} </p>
-        <p>Desc:{{ obj.content}}</p>
-        <p>Start Date:{{obj.start_date}}</p>
-        <p>End Date:{{obj.end_date}}</p>
-        <p>Speaker:{{obj.speaker}}</p>
-        <p>Registration link:{{obj.reg_link}}</p>
-        <p>Category: {{ obj.category }}</p>
-        {% endfor %}
-        </div>
-        </div>
+<center>
+    <h1>Events</h1>
+</center>
+{% for obj in queryset1 %} {% if obj.image %}
+<img src='{{ obj.image.url }}' class='img-responsive' /> {% endif %}
+<div class="caption">
+    <h3>
+        <p>{{ obj.event_name }}</a><small> &nbsp; {{ obj.timestamp | timesince  }} ago</p></small></h3>
+    <p><b>Created By</b> : {{ obj.created_by}} </p>
+    <p>Desc:{{ obj.content}}</p>
+    <p>Start Date:{{obj.start_date}}</p>
+    <p>End Date:{{obj.end_date}}</p>
+    <p>Speaker:{{obj.speaker}}</p>
+    <p>Registration link:{{obj.reg_link}}</p>
+    <p>Category: {{ obj.category }}</p>
+    {% endfor %}
+</div>
+</div>
 
 {% endblock content %}

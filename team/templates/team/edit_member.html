@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-      <h1>This page is to edit members of team by an already registered member </h1>
-      <div>
-        <form  method="post">
-          {% csrf_token %}
-          {{form.as_p}}
-        </form>
 
-      </div>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <h1>This page is to edit members of team by an already registered member </h1>
+  <div>
+    <form method="post">
+      {% csrf_token %} {{form.as_p}}
+    </form>
+
+  </div>
+</body>
+
 </html>
