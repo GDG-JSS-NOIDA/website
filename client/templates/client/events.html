@@ -155,10 +155,10 @@
 						</ul>
 						<!--/#portfolio-filter-->
 						<div class="row">
-
-							{% for obj in queryset1 %}
+							<div id="portfolio_text"></div>
 							<div class="portfolio-items">
-								<div class="portfolio-item all {{ obj.category }} col-xs-12 col-sm-4 col-md-3">
+							{% for obj in queryset1 %}
+								<div class="portfolio-item all {{ obj.status }} col-xs-12 col-sm-4 col-md-3">
 									<div class="recent-work-wrap">
 										<h5>{{ obj.event_name }}</h5> <img class="img-responsive" src="/media/{{obj.img}}" alt="">
 										<div class="overlay">
@@ -178,20 +178,20 @@
 											<h5 class="modal_header"><small>{{ obj.event_name }}</small> &nbsp; <span class="modal_time"> {{ obj.timestamp | timesince  }} ago</span>
 												<button type="button btn-large" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle fa-large" aria-hidden="true"></i></button></h5><br/>
 											<p><b>Created By</b> : {{ obj.created_by}} </p>
-											<p><b>Description</b></p>
+											<p><b>Description:</b></p>
 											<p>{{ obj.content}}</p>
 											<p><b>Start Date</b> : {{obj.start_date}}</p>
 											<p><b>End Date</b> : {{obj.end_date}}</p>
 											<p><b>Speaker(s)</b> : {{obj.speaker}}</p>
-											<p><b>Category</b> : {{ obj.category }}</p>
+											<!-- <p><b>Category</b> : {{ obj.category }}</p> -->
 											<p><b>Registration Link</b> : {{obj.reg_link}}</p>
 
 
 										</div>
 									</div>
 								</div>
-							</div>
 							{% endfor %}
+							</div>
 
 						</div>
 					</div>
