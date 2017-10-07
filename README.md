@@ -21,8 +21,11 @@ Follow this guide to setup this project on your local machine.
     ```
 4. For creating database migrations run
     
-    `python manage.py migrate`
-    `python manage.py makemigrations`
+    ```shell
+    python manage.py makemigrations
+    python manage.py migrate
+    ```
+    
 
 5. For running the server
    
