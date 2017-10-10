@@ -359,9 +359,8 @@
 				<!-- End Latest News Section -->
 				<!-- Begin Location Section -->
 				<section class="location-map" id="location-map">
-					<iframe frameborder="0" style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223) border:0"
-					    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBDH5mPzRXT8JI9m01mXhsesDQEX4Tl8oY
-							&q=place_id:ChIJf1Y03EHlDDkRGWvWI8sn0E8" allowfullscreen>
+					<iframe frameborder="0" style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);border:0"
+					    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBDH5mPzRXT8JI9m01mXhsesDQEX4Tl8oY&q=place_id:ChIJf1Y03EHlDDkRGWvWI8sn0E8" allowfullscreen>
 					</iframe>
 				</section>
 				<!-- End Location Section -->
@@ -421,7 +420,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-6">
-							<p class="copyright">Based on <a href="https://github.com/gdg-x/zeppelin" target="_blank">Project Zeppelin</a>. Built with <i class="fa fa-fw fa-coffee"></i>								and <i class="fa fa-fw fa-heart"></i> by <a href="#">GDG JSS Noida.</a></p>
+							<p class="copyright">Based on <a href="https://github.com/gdg-x/zeppelin" target="_blank">Project Zeppelin</a>. Built with <i class="fa fa-fw fa-coffee"></i> and <i class="fa fa-fw fa-heart"></i> by <a href="#">GDG JSS Noida.</a></p>
 						</div>
 					</div>
 				</footer>
@@ -429,7 +428,7 @@
 			</div>
 		</div>
 	</div>
-	<script async src="http://www.google-analytics.com/analytics.js"></script>
+	<!-- <script async src="http://www.google-analytics.com/analytics.js"></script>
 	<script>
 		(function (i, s, o, g, r, a, m) {
 			i['GoogleAnalyticsObject'] = r;
@@ -444,15 +443,13 @@
 		ga('create', 'UA-43643469-5', 'gdg-x.github.io');
 		ga('send', 'pageview');
 	</script>
-	<script src={% static 'js/bootstrap.min.js' %}>
-	</script>
 	<script>
 		if (typeof ($.fn.modal) === 'undefined') {
 			document.write('<script src="/js/bootstrap.min.js><\/script>')
 		}
-	</script>
-	<script src={% static 'js/default.js' %}>
-	</script>
+	</script> -->
+	<script src={% static 'js/bootstrap.min.js' %}></script>
+	<script src={% static 'js/default.js' %}></script>
 	<script>
 		Waves.displayEffect();
 		$(document).ready(function () {
