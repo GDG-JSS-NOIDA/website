@@ -139,6 +139,12 @@
   padding: 0;
 }
 
+
+#portfolio_text{
+  font-size: 20px;
+  color: #0f9d58;
+}
+
 /* Start: Recommended Isotope styles */
 /**** Isotope Filtering ****/
 .isotope-item {
