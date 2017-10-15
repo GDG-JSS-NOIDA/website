@@ -139,14 +139,11 @@
 							{% for obj in queryset1 %}
 								<div class="portfolio-item all {{ obj.status }} col-xs-12 col-sm-4 col-md-3">
 									<div class="recent-work-wrap">
+										<a href="#" role="button" data-toggle="modal" data-target="#myModal">
 										<h5>{{ obj.event_name }}</h5> <img class="img-responsive" src="/media/{{obj.img}}" alt="">
-										<div class="overlay">
-											<div class="recent-work-inner">
-												<h3><a href="#">{{ obj.event_name }}</a></h3>
-												<p>{{ obj.content }}</p>
-												<a href="#" role="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i> View</a>
-											</div>
+										<div class="overlay">>
 										</div>
+										</a>
 									</div>
 								</div>
 								<!--/.portfolio-item-->
@@ -154,7 +151,7 @@
 								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 									<div class="modal-dialog" role="document">
 										<div class="modal-content">
-											<h5 class="modal_header"><small>{{ obj.event_name }}</small> &nbsp; <span class="modal_time"> {{ obj.timestamp | timesince  }} ago</span>
+											<h5 class="modal_header"><small>{{ obj.event_name }}</small> &nbsp; 
 												<button type="button btn-large" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle fa-large" aria-hidden="true"></i></button></h5><br/>
 											<p><b>Created By</b> : {{ obj.created_by}} </p>
 											<p><b>Description:</b></p>
@@ -162,7 +159,9 @@
 											<p><b>Start Date</b> : {{obj.start_date}}</p>
 											<p><b>End Date</b> : {{obj.end_date}}</p>
 											<p><b>Speaker(s)</b> : {{obj.speaker}}</p>
+											{% if obj.status != "past" %}
 											<p><b>Registration Link</b> : {{obj.reg_link}}</p>
+											{% endif %}
 										</div>
 									</div>
 								</div>
