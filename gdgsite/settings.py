@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     # 'events',
     # 'accounts',
     # 'team',
-    'register',
+    # 'register',
     'client',
     'mainapp',
 ]
