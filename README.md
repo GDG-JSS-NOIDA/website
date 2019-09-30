@@ -1,6 +1,3 @@
-### Status
-[![Build Status](https://travis-ci.org/GDG-JSS-NOIDA/website.svg?branch=master)](https://travis-ci.org/GDG-JSS-NOIDA/website/)
-
 ## How to setup
 
 Follow this guide to setup this project on your local machine.
