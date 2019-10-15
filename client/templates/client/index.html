@@ -137,13 +137,15 @@
 									<a class="" href={% url 'client:projects' %}>Projects</a>
 								</li>
 							</ul>
-							<ul class="bottom-navlinks visible-xs" id="bottom-navlinks">
-								<li>
-									<a href={% url 'client:register' %}>Register</a>
-								</li>
-							</ul>
+							{%ifnotequal open_events 0%}
+								<ul class="bottom-navlinks visible-xs" id="bottom-navlinks">
+									<li>
+										<a href={% url 'client:register' %}>Register</a>
+									</li>
+								</ul>
 							<a class="right-nav-button right-nav-button-hidden btn btn-primary waves-effect waves-button waves-light waves-float pull-right hidden-xs hidden-sm"
 							    href={% url 'client:register' %}>Register</a>
+							{%endifnotequal%}
 						</nav>
 					</header>
 					<div class="content-wrapper">
