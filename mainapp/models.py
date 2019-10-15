@@ -90,6 +90,7 @@ class Event(models.Model):
                             width_field="width_field")
     height_field = models.IntegerField(default=290)
     width_field = models.IntegerField(default=210)
+    event_registration = models.BooleanField(default=False)
 
     def __str__(self):
         return self.event_name

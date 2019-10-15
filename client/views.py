@@ -8,6 +8,12 @@ from django.utils import timezone
 
 
 def index(request):
+    open_events = len(Event.objects.filter(event_registration=True))
+
+    context = {
+        "open_events": open_events,
+
+    }
     return render(request, 'client/index.html')
 
 
@@ -17,6 +23,7 @@ def events(request):
     ongoing = Event.objects.filter(start_date__lte=now, end_date__gte=now)
     upcoming = Event.objects.filter(start_date__gte=now)
     past = Event.objects.filter(end_date__lte=now)
+    open_events = len(Event.objects.filter(event_registration=True))
     full_list = []
     for items in ongoing:
         items.category = "ongoing"
@@ -30,6 +37,7 @@ def events(request):
 
     context = {
         "queryset1": full_list,
+        "open_events": open_events,
     }
     print(context)
     return render(request, 'client/events.html', context)
