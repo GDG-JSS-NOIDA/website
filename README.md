@@ -3,9 +3,9 @@
 
 ## How to setup
 
-Follow this guide to setup this project on your local machine.
+Follow this guide to successfully setup this project on your local machine.
 
-1. Install [python] 3.x, git and [virtualenv] in your computer.
+1. Install [python] 3.x `https://www.python.org/downloads/`, git `https://git-scm.com/downloads` and [virtualenv] in your computer.
 
 2. Get the source code on your machine by-
 
