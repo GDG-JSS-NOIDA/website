@@ -22,8 +22,8 @@ Follow this guide to setup this project on your local machine.
 4. For creating database migrations run.
     
      ```shell
-  ->  python manage.py makemigrations
-  ->  python manage.py migrate
+    python manage.py makemigrations
+    python manage.py migrate
     ```
     
 
